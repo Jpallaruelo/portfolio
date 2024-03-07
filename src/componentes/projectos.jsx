@@ -29,10 +29,10 @@ const ProjectosPage = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
 
     const projects = [
-        { id: 1, title: "TASKS", image: "images/tareas.jpg", path: "/tareas" },
-        { id: 2, title: "PARTICLES", image: "images/particles.png", path: "/particles" },
+        { id: 1, title: "TASKS", image: "images/task.jpg", path: "/tareas" },
+        { id: 2, title: "PARTICLES", image: "images/particles.webp", path: "/particles" },
         { id: 3, title: "CRIPTOS", image: "images/cryptos.jpg", path: "/cryptos" },
-        { id: 4, title: "CARD", image: "images/carrito.jpg", path: "/cartMain" },
+        { id: 4, title: "CARD", image: "images/redux.jpg", path: "/cartMain" },
         // { id: 4, title: "P-GENERATE", image: "images/password.webp", path: "/card" },
         // Agrega aquí más proyectos según necesites
     ];

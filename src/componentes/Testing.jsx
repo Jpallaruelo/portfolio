@@ -5,7 +5,7 @@ function Testing() {
   const [code, setCode] = useState("Write your tests here");
   const [output, setOutput] = useState("");
 
-  const [testRun ,setTestsRun] = useState(false)
+  const [testRun, setTestsRun] = useState(false)
 
 
   const handleCodeChange = (event) => {
@@ -106,7 +106,7 @@ function Testing() {
       userCodeFunction(jestSimulator, logResult);
     } catch (error) {
       logResult(`Error en la ejecución: ${error.message}`);
-      
+
     }
   };
 
@@ -123,7 +123,7 @@ function Testing() {
             <div className="tech-details">
               <div className="left-column">
                 <img
-                  src="/images/jest.webp"
+                  src="/images/testing.jpg"
                   alt="React Logo"
                   className="tech-logo"
                 />
@@ -134,21 +134,21 @@ function Testing() {
                   cada parte individual de mi código funcione correctamente de
                   forma aislada.
                 </p>
-                
-                
+
+
               </div>
             </div>
           </section>
           {/* Otras secciones */}
         </div>
-        
+
         <textarea
           className="code-input"
           value={code}
           onChange={handleCodeChange}
           rows={10}
           cols={80}
-          
+
         />
         <button className="button" onClick={executeCode}>
           Ejecutar Pruebas
@@ -156,9 +156,9 @@ function Testing() {
         <button className="button" onClick={generateRandomTest}>
           Generar Prueba Aleatoria
         </button>
-       
+
         <div className="output">
-        <h3>{testRun?"RESULT":"COSOLE.LOG"}</h3>
+          <h3>{testRun ? "RESULT" : "COSOLE.LOG"}</h3>
           {output}
         </div>
       </section>
