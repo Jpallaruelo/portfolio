@@ -1,0 +1,31 @@
+.inicio-container {
+    text-align: center;
+    padding: 0px;
+}
+
+.logos-container img {
+    width: 200px;
+    /* Establece un ancho fijo para la imagen */
+    height: 150px;
+    /* Establece una altura fija para la imagen */
+    object-fit: contain;
+    /* Asegura que la imagen se ajuste correctamente dentro de las dimensiones definidas */
+    margin: 20px;
+    padding: 30px;
+    /* Espacio alrededor de cada logo para evitar que se junten */
+}
+
+
+/* Las media queries para ajustar otros aspectos del diseño si es necesario, pero sin alterar el tamaño de las imágenes */
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {
+    .inicio-container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    /* Ajustes para desktop */
+
+}
+

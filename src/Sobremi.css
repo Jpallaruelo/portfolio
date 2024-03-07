@@ -1,0 +1,24 @@
+.sobremi-section h1 {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.sobremi-section img {
+  max-width: 100%;
+  height: 300px;
+  border-radius: 10px;
+ 
+}
+
+p {
+  color: rgb(255, 255, 255);
+}
+
+h3 {
+  color: rgb(68, 227, 255);
+}
+
+
+

@@ -3,18 +3,12 @@
 }
 
 .App-logo {
-  height: 40vmin;
+
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* .App-header {
+  background-color: #155be6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +16,792 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} */
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .App-link {
   color: #61dafb;
 }
 
+/* @keyframes App-logo-zoom { */
+/* 0% {
+    transform: scale(1);
+  } */
+
+/* 30% {
+    transform: scale(1.2);
+    /* Puedes ajustar el factor de escala según tus preferencias */
+/* } */
+
+/* 90% {
+    transform: scale(1);
+  } */
+/* } */
+
+
+h3 {
+  z-index: 3;
+  font-size: 50px;
+  color: #0beee3;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* Estilo base para los botones */
+.button {
+  background: linear-gradient(to right, #000000, #0A0A0A, #0beee3);
+  /* Degradado de negro a azul oscuro */
+  color: #FFFFFF;
+  /* Color del texto en blanco */
+  padding: 10px 20px;
+  /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+  font-size: 16px;
+  /* Tamaño del texto */
+  border: none;
+  /* Sin borde */
+  border-radius: 4px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima */
+  margin: 5px;
+  /* Márgenes */
+  text-align: center;
+  /* Asegura que el texto esté centrado, útil si el botón se convierte en un bloque o si el texto es largo */
+  display: inline-block;
+  /* Opción para asegurar que el botón no se estire más de lo necesario */
+  transition: background 0.3s ease;
+  /* Opcional: Añade una transición suave al pasar el mouse por encima o al hacer clic */
+}
+
+.button-delete {
+
+  background-color: #ffffff;
+  /* Color de fondo */
+  color: white;
+  /* Color del texto */
+  padding: 10px 20px;
+  /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+  font-size: 16px;
+  /* Tamaño del texto */
+  border: none;
+  /* Sin borde */
+  border-radius: 4px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima */
+  margin: 5px;
+}
+
+.button-update {
+  background-color: #f4d806;
+  /* Color de fondo */
+  color: white;
+  /* Color del texto */
+  padding: 10px 20px;
+  /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+  font-size: 16px;
+  /* Tamaño del texto */
+  border: none;
+  /* Sin borde */
+  border-radius: 4px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima */
+  margin: 5px;
+
+}
+
+/* Estilo cuando el cursor pasa por encima del botón */
+.button:hover {
+  background: linear-gradient(to right, #e7e4e4, #f3f3f3, #0beee3);
+  color: #000000;
+}
+
+.registration-form {
+  max-width: 400px;
+  /* Ancho máximo del formulario */
+  margin: 0 auto;
+  /* Centrar el formulario en la página */
+  padding: 20px;
+  /* Espaciado interno del formulario */
+  background-color: #f7f7f7;
+  /* Color de fondo principal */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.87);
+  /* Sombra para un efecto de elevación */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  /* Márgenes entre grupos de formularios */
+}
+
+label {
+  display: block;
+  /* Mostrar etiquetas en bloques para mejor disposición */
+  margin-bottom: 8px;
+  /* Márgenes inferiores de las etiquetas */
+  color: #040404;
+  /* Color de texto para las etiquetas */
+}
+
+.input-field {
+  /* width: 100%; */
+  /* Ancho completo del campo de entrada */
+  /* padding: 10px; */
+  /* Espaciado interno del campo de entrada */
+  /* border: 1px solid #61dafb; */
+  /* Borde del campo de entrada */
+  /* border-radius: 4px; */
+  /* Bordes redondeados */
+  /* background-color: #fff; */
+  /* Color de fondo del campo de entrada */
+  /* color: #d2d9e5; */
+  /* Color de texto del campo de entrada */
+}
+
+.submit-button {
+  background-color: #61dafb;
+  /* Color de fondo del botón de enviar */
+  color: #fff;
+  /* Color de texto del botón de enviar */
+  padding: 10px 20px;
+  /* Espaciado interno del botón de enviar */
+  border: none;
+  /* Sin borde */
+  border-radius: 4px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima */
+}
+
+.submit-button:hover {
+  background-color: #4fa3d1;
+  /* Cambia el color de fondo al pasar por encima del botón */
+}
+
+
+
+
+h1 {
+
+  color: #61dafb;
+}
+
+/* estilos modal  */
+
+/* ArkanoidGame.css */
+
+.custom-modal {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+  color: white;
+  /* Ajusta el ancho de la modal */
+  max-width: 500px;
+  text-align: center;
+  /* Máximo ancho que puede tener */
+  box-sizing: border-box;
+  /* Asegura que el padding no afecte el ancho total */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Centra la modal perfectamente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Opcional: Agrega sombra para destacar la modal */
+  z-index: 1000;
+  /* Asegura que la modal esté por encima de otros elementos */
+}
+
+.custom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  /* Asegura que el overlay esté justo debajo de la modal */
+}
+
+.board-row {
+  display: flex;
+}
+
+/* Estilos para las casillas */
+.square {
+  width: 140px;
+  /* Tamaño de la casilla */
+  height: 100px;
+  /* Tamaño de la casilla */
+  background: #0ec5dd;
+  border: 2px solid #999;
+  /* Borde de la casilla */
+  padding: 0;
+  font-size: 24px;
+  /* Tamaño del texto dentro de la casilla */
+  font-weight: bold;
+  line-height: 60px;
+  /* Centra el texto verticalmente */
+  text-align: center;
+  /* Centra el texto horizontalmente */
+  cursor: pointer;
+  /* Cambia el cursor a un puntero para indicar que es clickable */
+}
+
+.square:focus {
+  outline: none;
+  /* Elimina el borde que aparece al hacer clic en las casillas */
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-info {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+/* tablero ajedrez */
+
+.board {
+  width: fit-content;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.board h1 {
+  color: #eee;
+  margin-bottom: 16px;
+}
+
+p {
+
+  font-size: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.habilidadesContainer {
+  display: flex;
+  justify-content: space-between;
+  /* Ajusta según el diseño deseado */
+}
+
+/* animacion cartas */
+.mostrar .fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* animacion texto aboutus */
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+p {
+  color: white;
+}
+
+.typing-animation {
+  overflow: hidden;
+  display: inline-block;
+  animation: typing 2s steps(40, end) infinite alternate;
+  /* Ajusta la duración según necesites */
+}
+
+/* .board button {
+  padding: 8px 12px;
+  margin: 25px;
+  background: transparent;
+  border: 2px solid #eee;
+  color: #eee;
+  width: 100px;
+  border-radius: 5px;
+  transition: 0.2s;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.board button:hover {
+  background: #eee;
+  color: #222222;
+} */
+
+.board .game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+
+.turn {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto;
+  width: fit-content;
+  position: relative;
+  border-radius: 10px;
+}
+
+.turn .square,
+.winner .square {
+  width: 70px;
+  height: 70px;
+  pointer-events: none;
+  border-color: transparent;
+}
+
+.square.is-selected {
+  color: #fff;
+  background: #09f;
+}
+
+.winner {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.winner .text {
+  background: #111;
+  height: 300px;
+  width: 320px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.winner .win {
+  margin: 0 auto;
+  width: fit-content;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 48px;
+}
+
+/* //serpiente */
+li {
+  color: white;
+
+}
+
+.boardSnake {
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-gap: 1px;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  background-color: #f4f4f4;
+}
+
+.snake {
+  background-color: #0d90a7;
+}
+
+.div-tareas {
+
+  background-color: rgb(216, 230, 235);
+
+}
+
+ul {
+  display: block;
+  list-style-type: none;
+}
+
+li {
+  font-size: 40px;
+
+
+}
+
+.pfooter {
+  color: rgb(26, 222, 236);
+}
+
+.li-div {
+  margin-top: 10px;
+  border: 3px solid rgb(49, 144, 173);
+  text-align: center;
+  background-color: rgb(26, 222, 236);
+  border-radius: 10px;
+
+}
+
+.sobremi-section {
+  position: relative;
+  height: 00px;
+  /* Ajusta la altura según tus necesidades */
+  color: #fff;
+  /* Color del texto */
+}
+
+.sobremi-section {
+  position: relative;
+  height: 100vh;
+  /* 100% de la altura de la ventana */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+/* inicio */
+
+.inicio-container {
+  position: relative;
+  width: auto;
+  height: auto;
+  /* background-image: url('../public/images/computer.jpg'); */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Asegúrate de que el contenido sobre la imagen tenga suficiente contraste */
+.texto,
+.buttons-container,
+.logos-container {
+  z-index: 10000;
+
+
+  /* Cambia este color según sea necesario para contraste */
+}
+
+/* Opcional: Overlay para mejorar la legibilidad del texto sobre la imagen de fondo */
+@media screen and (max-width: 767px) {
+  .inicio-container {
+    background-size: cover;
+    font-size: 1.5em;
+
+
+  }
+
+  /* h3 {
+    display: none;
+  } */
+
+
+
+  /* CARTAS */
+
+
+}
+
+/* carritocompora */
+
+nav {
+  background-color: #0beee3;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+nav>h2 {
+  position: relative;
+  left: 60;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+  list-style: none;
+  cursor: pointer;
+}
+
+/******** Items List ******/
+
+.items-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+/****** Item  box *********/
+.item-box {
+  background-color: #070303;
+  margin: 10px;
+  padding: 20px;
+  width: 510px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.item-quantity {
+  color: #fff;
+  background-color: #f0ad4e;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  max-width: 30px;
+  position: relative;
+  left: 40px;
+}
+
+.item-price {
+  color: gray;
+}
+
+@media screen and (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+.item-add-button {
+  background-color: #5cb85c;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+  height: 20px;
+}
+
+.item-minus-button {
+  background-color: #d9534f;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.item-plus-button {
+  background-color: #337ab7;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/****** Shopping Cart ********/
+
+.cart-containerShop {
+  display: flex;
+  justify-content: center;
+  margin: 90px;
+}
+
+.cart-count {
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 8px;
+}
+
+
+/* frontpagage */
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tech-section {
+  /* Estilos según necesites */
+}
+
+.tech-details {
+  display: flex;
+}
+
+.left-column {
+  flex: 1;
+  /* Toma el 50% del espacio disponible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-column {
+  flex: 1;
+  /* Toma el 50% del espacio disponible */
+  padding-left: 20px;
+  /* Espaciado entre las columnas */
+}
+
+.tech-logo {
+  width: 600px;
+  /* Ajusta el tamaño según necesites */
+  margin-bottom: 10px;
+  /* Espaciado entre la imagen y el título */
+  border-radius: 20px;
+}
+
+.right-column h3 {
+  margin-top: 0;
+  /* Elimina el margen superior del título */
+}
+
+.right-column button {
+  margin-top: 10px;
+  /* Espaciado entre el texto y el botón */
+  /* Otros estilos del botón según necesites */
+}
+
+.add-button {
+
+  background: linear-gradient(to right, #000000, #60a12b, #12fd01);
+  /* Degradado de negro a azul oscuro */
+  color: #FFFFFF;
+  /* Color del texto en blanco */
+  padding: 10px 20px;
+  /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+  font-size: 26px;
+  /* Tamaño del texto */
+  border: none;
+  /* Sin borde */
+  border-radius: 4px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima */
+  margin: 5px;
+  /* Márgenes */
+  text-align: center;
+  /* Asegura que el texto esté centrado, útil si el botón se convierte en un bloque o si el texto es largo */
+  display: inline-block;
+  /* Opción para asegurar que el botón no se estire más de lo necesario */
+  transition: background 0.3s ease;
+}
+
+.update-button {
+
+  background: linear-gradient(to right, #000000, #fbe200, #dfff0efd);
+  /* Degradado de negro a azul oscuro */
+  color: #FFFFFF;
+  /* Color del texto en blanco */
+  padding: 10px 20px;
+  /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+  font-size: 26px;
+  /* Tamaño del texto */
+  border: none;
+  /* Sin borde */
+  border-radius: 4px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima */
+  margin: 5px;
+  /* Márgenes */
+  text-align: center;
+  /* Asegura que el texto esté centrado, útil si el botón se convierte en un bloque o si el texto es largo */
+  display: inline-block;
+  /* Opción para asegurar que el botón no se estire más de lo necesario */
+  transition: background 0.3s ease;
+
+}
+
+.clear-button {
+
+  background: linear-gradient(to right, #000000, #0e39e7, #0716e4);
+  /* Degradado de negro a azul oscuro */
+  color: #FFFFFF;
+  /* Color del texto en blanco */
+  padding: 10px 20px;
+  /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+  font-size: 26px;
+  /* Tamaño del texto */
+  border: none;
+  /* Sin borde */
+  border-radius: 4px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima */
+  margin: 5px;
+  /* Márgenes */
+  text-align: center;
+  /* Asegura que el texto esté centrado, útil si el botón se convierte en un bloque o si el texto es largo */
+  display: inline-block;
+  /* Opción para asegurar que el botón no se estire más de lo necesario */
+  transition: background 0.3s ease;
+}
+
+.output {
+  margin-top: 10px;
+  height: 250px;
+  padding: 5px;
+  border: 3px solid #12a2e6;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  /* Respeta espacios y saltos de línea */
+  overflow-x: auto;
+  /* Añade scroll horizontal si es necesario */
+  border-radius: 4px;
 }

@@ -1,0 +1,20 @@
+.game-area {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #080c0c;
+  }
+  
+  .snake-segment {
+    position: absolute;
+    width: 2%;
+    height: 2%;
+    background-color: rgb(7, 219, 235);
+  }
+  
+  .food {
+    position: absolute;
+    width: 2%;
+    height: 2%;
+    background-color: rgb(234, 0, 255);
+  }

@@ -1,0 +1,50 @@
+/* Estilos comunes para .editing, .adding, .focused, .editing.focused, .adding.focused */
+.editing,
+.adding,
+.focused,
+.editing.focused,
+.adding.focused {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+/* Estilos específicos para cada estado */
+.editing {
+    border-color: #ff00c8;
+}
+
+.adding {
+    border-color: #008000;
+}
+
+.focused {
+    border-color: #007bff !important;
+}
+
+.editing.focused {
+    border-color: #FFD700 !important;
+}
+
+.adding.focused {
+    border-color: #008000 !important;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+
+    .editing,
+    .adding,
+    .focused,
+    .editing.focused,
+    .adding.focused {
+        width: calc(100% - 20px);
+        /* Ajusta el ancho y resta 20px para dejar espacio alrededor */
+        margin: 10px 0;
+        /* Ajusta el margen para dispositivos móviles */
+        font-size: 16px;
+        /* Ajusta el tamaño de la fuente para mejorar la legibilidad */
+        padding: 8px;
+        /* Ajusta el relleno para un aspecto más compacto */
+    }
+}

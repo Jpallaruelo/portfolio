@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "c++",
+        "price": 10,
+        "imgUrl": "./images/c++.webp"
+    },
+    {
+        "id": 2,
+        "name": "phython",
+        "price": 800,
+        "imgUrl": "./images/java.jfif"
+    },
+    {
+        "id": 3,
+        "name": "Reat",
+        "price": 400,
+        "imgUrl": "./images/reactlibro.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Agular",
+        "price": 550,
+        "imgUrl": "./images/angular.jfif"
+    }
+]
