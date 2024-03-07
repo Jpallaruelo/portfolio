@@ -117,42 +117,50 @@ const SnakeGame = () => {
     navigate("/");
   };
   return (
-    <div className="game-area">
-      {snake.map((segment, index) => (
+    <>
+      <div className="game-area">
+        {snake.map((segment, index) => (
+          <div
+            key={index}
+            className="snake-segment"
+            style={{ left: `${segment.x * 2}%`, top: `${segment.y * 2}%` }}
+          />
+        ))}
         <div
-          key={index}
-          className="snake-segment"
-          style={{ left: `${segment.x * 2}%`, top: `${segment.y * 2}%` }}
+          className="food"
+          style={{ left: `${food.x * 2}%`, top: `${food.y * 2}%` }}
         />
-      ))}
-      <div
-        className="food"
-        style={{ left: `${food.x * 2}%`, top: `${food.y * 2}%` }}
-      />
 
 
-      <Modal
-        isOpen={isGameCompleted}
-
-        contentLabel="Game Completed Modal"
-        className="custom-modal"
-        overlayClassName="custom-overlay"
-      >
-        <h4>HAS MUERTO</h4>
-
-        <button className="button" onClick={closeDino}>
-          DINO
-        </button>
-        <button className="button" onClick={closeTicTac}>
-          TICTAC
-        </button>
-        <button className="button" onClick={closeModal}>
-          SNAKE
-        </button>
 
 
-      </Modal>
-    </div>
+        <Modal
+          isOpen={isGameCompleted}
+
+          contentLabel="Game Completed Modal"
+          className="custom-modal"
+          overlayClassName="custom-overlay"
+        >
+          <h4>HAS MUERTO</h4>
+
+          <button className="button" onClick={closeDino}>
+            DINO
+          </button>
+          <button className="button" onClick={closeTicTac}>
+            TICTAC
+          </button>
+          <button className="button" onClick={closeModal}>
+            SNAKE
+          </button>
+
+
+        </Modal>
+      </div>
+      <button className="button" onClick={closefinish}>
+        BACK
+      </button>
+
+    </>
 
 
 
