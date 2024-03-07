@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 const SnakeGame = () => {
   const [snake, setSnake] = useState([{ x: 10, y: 10 }]);
   const [food, setFood] = useState({ x: 5, y: 5 });
-  const [direction, setDirection] = useState("RIGHT");
+  const [direction, setDirection] = useState();
   const [speed, setSpeed] = useState(200);
 
   useEffect(() => {
@@ -29,9 +29,9 @@ const SnakeGame = () => {
     };
     window.addEventListener("keydown", handleKeyPress);
 
-    return () => {
-      window.removeEventListener("keydown", handleKeyPress);
-    };
+    // return () => {
+    //   window.removeEventListener("keydown", handleKeyPress);
+    // };
   }, []);
 
   useEffect(() => {
@@ -54,6 +54,20 @@ const SnakeGame = () => {
           break;
         default:
           break;
+      }
+
+      // Verificar colisiones con los bordes
+      const isOutOfBounds =
+        head.x < 0 || head.x >= 50 || head.y < 0 || head.y >= 50;
+
+      if (isOutOfBounds) {
+        // Reiniciar el juego si la serpiente colisiona con los bordes
+        setSnake([{ x: 10, y: 10 }]);
+        setFood({ x: 5, y: 5 });
+        setDirection();
+        alert("has muerto")
+        setSpeed(200);
+        return;
       }
 
       // Verificar si la cabeza coincide con la posición de la comida

@@ -1,20 +1,27 @@
 .game-area {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-color: #080c0c;
-  }
-  
-  .snake-segment {
-    position: absolute;
-    width: 2%;
-    height: 2%;
-    background-color: rgb(7, 219, 235);
-  }
-  
-  .food {
-    position: absolute;
-    width: 2%;
-    height: 2%;
-    background-color: rgb(234, 0, 255);
-  }
+  position: relative;
+  width: 80vw;
+  /* Utilizar el 80% del ancho de la ventana */
+  height: 60vh;
+  /* Utilizar el 60% de la altura de la ventana o ajusta según tus necesidades */
+  border: 8px solid #00e5ff;
+  /* Añadir bordes amarillos gruesos */
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: 30px;
+  /* Centra el contenedor horizontalmente */
+}
+
+.snake-segment {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  background-color: rgb(7, 219, 235);
+}
+
+.food {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  background-color: rgb(234, 0, 255);
+}
