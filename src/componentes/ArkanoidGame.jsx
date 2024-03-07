@@ -18,10 +18,10 @@ const ArkanoidGame = () => {
   // const [timeElapsed, setTimeElapsed] = useState(0);
 
   const paddleImage = new Image();
-  paddleImage.src = "/images/raqueta.webp";
+  paddleImage.src = "/images/raqueta.png";
 
   const ballImage = new Image();
-  ballImage.src = "/images/reactPelota.jpg";
+  ballImage.src = "/images/reacPelota.jpg";
 
   const [blocks, setBlocks] = useState([
     { x: 50, y: 50, width: 50, height: 20, isBroken: false },

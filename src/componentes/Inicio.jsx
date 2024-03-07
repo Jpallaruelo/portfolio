@@ -47,7 +47,7 @@ const Inicio = () => {
                 {/* <img src="/images/node.png" className="laravel-logo" alt="node" ></img> */}
                 <img src="/images/js.png" className="js-logo" alt="js" ></img>
 
-                <img className="git-logo" src="/images/gitbueno.png" alt="git" ></img>
+                <img className="git-logo" src="/images/gitBueno.png" alt="git" ></img>
                 {/* <img src={} className="Vue-logo" alt="Vue logo" />
                 <img src={} className="Laravel-logo" alt="Laravel logo" /> */}
             </div>
