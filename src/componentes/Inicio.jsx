@@ -26,7 +26,7 @@ const Inicio = () => {
                 <button className="button" onClick={() => navigate("/proyectos")}>
                     PROJECTS
                 </button>
-                <button className="button" onClick={() => navigate("/sobre-mi")}>
+                <button className="button" onClick={() => navigate("/")}>
                     ABOUT ME
                 </button>
                 <button className="button" onClick={() => navigate("/juegos")}>
@@ -39,7 +39,7 @@ const Inicio = () => {
                     registro
                 </button> */}
 
-                <button className="button" onClick={() => navigate("testing")}>
+                <button className="button" onClick={() => navigate("/testing")}>
                     TESTING
                 </button>
             </div>

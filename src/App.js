@@ -38,7 +38,8 @@ function App() {
       <div className="App">
         <Routes>
           {/* Utiliza el componente Inicio como página de inicio */}
-          <Route path="/" element={<Inicio />} />
+          <Route path="/" element={<Sobremi />} />
+          <Route path="/portfolio" element={<Inicio />} />
 
           <Route path="/cartMain" element={<ItemList />}></Route>
           <Route path="/cart" element={<ShoopingCart />}></Route>
@@ -47,7 +48,7 @@ function App() {
           <Route path="/particles" element={<ParticlesJsComponent />} />
           <Route path="/cryptos" element={<Cryptos />} />
 
-          <Route path="/sobre-mi" element={<Sobremi />} />
+
           <Route path="/tareas" element={<TaskApp />} />
           <Route path="/testing" element={<Testing />} />
           <Route path="/registro" element={<Registro />} />

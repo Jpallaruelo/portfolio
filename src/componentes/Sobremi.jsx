@@ -35,16 +35,16 @@ const ImagenPerfil = styled.img`
 const Titulo = styled.h1`
   color: #0beee3; // Color del texto, ajústalo a tus necesidades
   text-align: center;
-  padding: 10px;
+ 
   font-size: 50px;
-  margin-top: 10px; // Ajuste de espacio
+  margin-top: 40px; // Ajuste de espacio
 `;
 
 const Subtitulo = styled.p`
   color: white;
   text-align: center;
   margin-top: 10px;
-  font-size: 28px;
+  font-size: 48px;
 `;
 
 const Button = styled.button`
@@ -165,22 +165,31 @@ const SeccionImagenTitulo = () => {
     navigate(path);
   };
 
+  const toogleporfolio = () => {
+    navigate('/portfolio')
+
+  }
+
   //texto para traducir
 
   return (
     <div>
       {!mostrarInfo && (
-        <>
+        <>   <Titulo>Jonathan Pallaruelo</Titulo>
           <SeccionCentrada>
+
             <ImagenPerfil
-              src="images/yo.avif"
+              src="images/react.jpg"
               alt="Jonathan Pallaruelo Elvira"
             />
           </SeccionCentrada>
-          <Titulo>Jonathan Pallaruelo</Titulo>
+
           <Subtitulo>WEB-DEVELOPER</Subtitulo>
           <Button className="button" onClick={toggleButton}>
             MEET ME!
+          </Button>
+          <Button className="button" onClick={toogleporfolio}>
+            PORTFOLIO
           </Button>
           <a
             href={"/images/CV.JonathanPallarueloElvira.pdf"}
@@ -219,7 +228,7 @@ const SeccionImagenTitulo = () => {
 
                   <HabilidadImagen src="images/backend.jpg" alt="Backend" />
                 </HabilidadCard>
-                
+
                 <HabilidadCard
                   onClick={() => handleCardClick("/testing")}
                   className="fadeIn"

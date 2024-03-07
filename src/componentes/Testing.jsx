@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import "../testing.css";
+import { useNavigate } from "react-router-dom";
 
 function Testing() {
   const [code, setCode] = useState("Write your tests here");
   const [output, setOutput] = useState("");
+
+  const navigate = useNavigate()
+
+  const togglenavigate = () => {
+
+    navigate('/portfolio')
+  }
+
 
   const [testRun, setTestsRun] = useState(false)
 
@@ -155,6 +164,9 @@ function Testing() {
         </button>
         <button className="button" onClick={generateRandomTest}>
           Generar Prueba Aleatoria
+        </button>
+        <button className="button" onClick={togglenavigate}>
+          PORTFOLIO
         </button>
 
         <div className="output">

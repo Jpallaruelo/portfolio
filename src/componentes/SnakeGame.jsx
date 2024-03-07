@@ -1,5 +1,7 @@
 // src/Board.js
 import React, { useState, useEffect } from "react";
+import Modal from "react-modal";
+import { useNavigate } from "react-router-dom";
 // Asegúrate de crear este archivo CSS para los estilos
 
 const SnakeGame = () => {
@@ -7,6 +9,8 @@ const SnakeGame = () => {
   const [food, setFood] = useState({ x: 5, y: 5 });
   const [direction, setDirection] = useState();
   const [speed, setSpeed] = useState(200);
+  const [isGameCompleted, setGameCompleted] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleKeyPress = (e) => {
@@ -65,7 +69,8 @@ const SnakeGame = () => {
         setSnake([{ x: 10, y: 10 }]);
         setFood({ x: 5, y: 5 });
         setDirection();
-        alert("has muerto")
+        // alert("has muerto")
+        setGameCompleted(true)
         setSpeed(200);
         return;
       }
@@ -94,6 +99,23 @@ const SnakeGame = () => {
 
     return () => clearInterval(gameLoop);
   }, [snake, direction, speed, food]);
+
+  const closeDino = () => {
+    setGameCompleted(false);
+    navigate("/juegos/Dinosaurio");
+  };
+  const closeTicTac = () => {
+    setGameCompleted(false);
+    navigate("/juegos/tictac");
+  };
+  const closeModal = () => {
+    setGameCompleted(false);
+    navigate("/juegos/snake");
+  };
+  const closefinish = () => {
+    setGameCompleted(false);
+    navigate("/");
+  };
   return (
     <div className="game-area">
       {snake.map((segment, index) => (
@@ -107,7 +129,36 @@ const SnakeGame = () => {
         className="food"
         style={{ left: `${food.x * 2}%`, top: `${food.y * 2}%` }}
       />
+
+
+      <Modal
+        isOpen={isGameCompleted}
+
+        contentLabel="Game Completed Modal"
+        className="custom-modal"
+        overlayClassName="custom-overlay"
+      >
+        <h4>HAS MUERTO</h4>
+
+        <button className="button" onClick={closeDino}>
+          DINO
+        </button>
+        <button className="button" onClick={closeTicTac}>
+          TICTAC
+        </button>
+        <button className="button" onClick={closeModal}>
+          SNAKE
+        </button>
+
+
+      </Modal>
     </div>
+
+
+
+
+
+
   );
 };
 
