@@ -50,14 +50,14 @@ const App = () => {
 
   return (
     <div>
-     
+
       {loading ? (
         <p>Cargando datos...</p>
       ) : error ? (
         <div className="loading-container">
-          <img src={'images/fetchingdata.jpeg'} alt="Error al cargar" style={{ width: '100%', maxWidth: '860px', height: 'auto' }} />
+          <img src={'images/feching.jpg'} alt="Error al cargar" style={{ width: '100%', maxWidth: '860px', height: 'auto' }} />
           <h3>LOADING...</h3>
-          <img src={'images/cripto.jpg'} alt="Error al cargar" style={{ width: '100%', maxWidth: '260px', height: 'auto' }} />
+          <img src={'images/cryptos.webp'} alt="Error al cargar" style={{ width: '100%', maxWidth: '260px', height: 'auto' }} />
           <p></p>
         </div>
       ) : (
@@ -75,7 +75,7 @@ const App = () => {
               backgroundColor: "black",
               color: "white",
               outline: "none",
-              margin:"20px"
+              margin: "20px"
             }}
           />
           <div

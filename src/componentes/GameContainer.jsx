@@ -52,7 +52,7 @@ const GameContainer = () => {
         <GameCard
           // title="DINO"
           onClick={() => handleGameSelection("dinosaurio")}
-          image="images/dinosaurio.jpg"
+          image="images/dinofondo.png"
         />
         <GameCard
           // title="TIC,TAC"
