@@ -12,7 +12,7 @@ const ArkanoidGame = () => {
 
   const handleSubmit = (event) => {
 
-    navigate("/");
+    navigate("/portfolio");
 
   };
   // const [timeElapsed, setTimeElapsed] = useState(0);
@@ -239,7 +239,7 @@ const ArkanoidGame = () => {
       </Modal>
       <canvas ref={canvasRef} />
       <button className="button" onClick={handleSubmit}>
-        Ir a Otra Ruta
+        PORTFOLIO
       </button>
     </div>
   );

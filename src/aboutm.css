@@ -1,0 +1,123 @@
+/* Estilos generales */
+
+.Titulo {
+    color: #0beee3;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 40px;
+  }
+  
+  .SeccionCentrada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 80px;
+  }
+  
+  .ImagenPerfil {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 20%;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  
+  .Subtitulo {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 48px;
+  }
+  
+  .button {
+    background: linear-gradient(to right, #000000, #0A0A0A, #0beee3);
+    color: #FFFFFF;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;
+    transition: background 0.3s ease;
+  }
+  
+  .button-delete {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button-update {
+    background-color: #f4d806;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  /* Estilos para la sección de resumen */
+  
+  .SeccionResumen {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .SeccionResumen h3 {
+    margin-bottom: 20px;
+  }
+  
+  .SeccionResumen p {
+    margin: 10px 0;
+  }
+  
+  /* Estilos para las cartas de habilidades */
+  
+  .HabilidadesContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .cartaEstilo {
+    width: 100%; /* Ocupa el 100% del ancho en dispositivos móviles */
+    background-color: black;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+  
+    @media (min-width: 768px) {
+      width: 30%; /* Vuelve a 30% en dispositivos más grandes */
+    }
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    h1 {
+      transition: font-size 0.3s ease;
+    }
+  
+    &:hover h1 {
+      font-size: 32px;
+    }
+  }
+  
