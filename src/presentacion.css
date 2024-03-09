@@ -1,0 +1,87 @@
+.portfolio-section {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    /* Fondo negro */
+    color: #fff;
+    /* Texto blanco */
+}
+
+.profile-image-container {
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    width: 250px;
+    /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: 250px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.phrases {
+    margin-bottom: 30px;
+}
+
+.phrases p {
+    margin: 10px 0;
+}
+
+.btn-projects {
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    flex-wrap: wrap;
+    /* Para permitir que las cartas se envuelvan a la siguiente línea en pantallas más pequeñas */
+}
+
+.info-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    margin: 10px;
+    /* Ajusta el margen según sea necesario */
+}
+
+.info-card h4 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    margin: 10px 0;
+}
+
+h4 {
+    font-size: 50px;
+}
+
+li {
+    font-size: 20px;
+}
+
+.p-sobremi {
+
+    color: #0beee3;
+}

@@ -31,6 +31,7 @@ import { ItemList } from "./componentesCarrito/itemList";
 import FrontPage from "./aboutMePages/front";
 import BackPage from "./aboutMePages/back";
 import TaskApp from "./projectsFront/task";
+import Porfoliopresentacion from "./componentes/presentacion";
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
       <div className="App">
         <Routes>
           {/* Utiliza el componente Inicio como página de inicio */}
-          <Route path="/" element={<Sobremi />} />
+          <Route path="/" element={<Porfoliopresentacion />} />
           <Route path="/portfolio" element={<Inicio />} />
 
           <Route path="/cartMain" element={<ItemList />}></Route>

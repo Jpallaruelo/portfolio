@@ -97,6 +97,8 @@
   flex-wrap: wrap;
 }
 
+
+
 .cartaEstilo {
   width: 100%;
   /* Ocupa el 100% del ancho en dispositivos móviles */
@@ -112,9 +114,7 @@
     /* Vuelve a 30% en dispositivos más grandes */
   }
 
-  &:hover {
-    
-  }
+  &:hover {}
 
   h1 {
     transition: font-size 0.3s ease;

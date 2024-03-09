@@ -35,6 +35,7 @@ const SeccionImagenTitulo = () => {
       {!mostrarInfo && (
         <>
           <h1 className="Titulo">Jonathan Pallaruelo</h1>
+
           <div className="SeccionCentrada">
             <img className="ImagenPerfil" src="images/react.jpg" alt="Jonathan Pallaruelo Elvira" />
           </div>

@@ -11,12 +11,12 @@ const Inicio = () => {
     return (
         <div className="inicio-container">
             <h3>WELCOME TO MY WEB PORTFOLIO</h3>
-            <p> Aquí encontrarás un recorrido a través de mi experiencia y proyectos en el emocionante mundo del desarrollo web. Para facilitar tu exploración, he organizado la navegación de la siguiente manera:
 
 
 
 
-            </p>
+
+
 
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
             <div className="logos-container">
@@ -58,7 +58,7 @@ const Inicio = () => {
                 <img src={} className="Laravel-logo" alt="Laravel logo" /> */}
             </div>
 
-        </div>
+        </div >
     );
 };
 
