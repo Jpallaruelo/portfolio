@@ -30,11 +30,11 @@ const Inicio = () => {
                 <button className="button" onClick={() => navigate("/proyectos")}>
                     PROJECTS
                 </button>
-                <button className="button" onClick={() => navigate("/")}>
-                    ABOUT ME
-                </button>
                 <button className="button" onClick={() => navigate("/juegos")}>
                     GAMES
+                </button>
+                <button className="button" onClick={() => navigate("/")}>
+                    ABOUT ME
                 </button>
                 {/* <button className="button" onClick={() => navigate("/login")}>
                     login
