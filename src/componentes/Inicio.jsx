@@ -2,23 +2,21 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../logo.svg";
 import "../inicio.css";
+import { useEffect, useLocation } from "react";
 
 
 
 const Inicio = () => {
     const navigate = useNavigate();
 
+
+
     return (
         <div className="inicio-container">
-            <h3>WELCOME TO MY WEB PORTFOLIO</h3>
 
 
 
 
-
-
-
-            {/* <img src={logo} className="App-logo" alt="logo" /> */}
             <div className="logos-container">
                 <img src="/images/laravel.png" className="laravel-logo" alt="Laravel logo" ></img>
                 <img src={logo} className="App-logo" alt="React logo" />
@@ -49,7 +47,7 @@ const Inicio = () => {
                     TESTING
                 </button>
             </div>
-            <div className="logos-container">
+            <div className="logos-containerback">
                 {/* <img src="/images/node.png" className="laravel-logo" alt="node" ></img> */}
                 <img src="/images/js.png" className="js-logo" alt="js" ></img>
 
