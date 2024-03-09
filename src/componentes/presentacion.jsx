@@ -92,8 +92,9 @@ const PortfolioSection = () => {
 
                 <div className="contact-info">
                     {/* Agrega la imagen aquí */}
-                    <img className='responsive-image' src="images/git.avif" alt="Imagen de contacto" />
+                    <img className='responsive-image' src="images/git.png" alt="Imagen de contacto" />
                     <img className='responsive-image' src="images/linkedin.png" alt="Imagen de contacto" />
+                    <img className='responsive-image' src="images/logoapps.png" alt="Imagen de contacto" />
                 </div>
             </div>
 
