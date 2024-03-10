@@ -11,6 +11,12 @@ import SnakeGame from "./SnakeGame";
 const GameContainer = () => {
   const [selectedGame, setSelectedGame] = useState(null);
 
+  const handleButtonClick = (route) => {
+    navigate(route);
+  };
+
+
+
   const navigate = useNavigate();
   // Puedes expandir esto para incluir más juegos
   const renderGame = () => {
@@ -66,7 +72,8 @@ const GameContainer = () => {
         />
       </div>
       <div>{renderGame()}</div>
-      <button className="button">BACK</button>
+      <button className="button" onClick={() => handleButtonClick('/portfolio')}>BACK</button>
+      <button className="button" onClick={() => handleButtonClick('/testing')}>TESTING</button>
     </div>
   );
 

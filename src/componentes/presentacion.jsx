@@ -109,8 +109,22 @@ const PortfolioSection = () => {
                 <div className='contact-info'>
                     <p>📧 jonathanpallarueloelvira92@gmail.com</p>
                     <p> 📲657357740</p>
-                    <button className='button' onClick={togglenavigate}>CV</button>
+
+
+                    <a href={"/images/CV.JonathanP.pdf"} download="MiCV.pdf">
+                        <button className="button">GET-CV</button>
+
+                    </a>
+                   
+
+
+
+
                 </div>
+                <div>
+                    <img src="images/" alt="" />
+                </div>
+
             </div>
 
         </div>

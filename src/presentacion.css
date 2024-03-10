@@ -113,7 +113,7 @@ label {
 
 .contact-info {
     flex: 1;
-   margin-right: 50px;
+    margin-right: 50px;
     /* Márgenes a la izquierda y a la derecha */
 }
 
@@ -145,6 +145,8 @@ button:hover {
     height: auto;
     max-width: 100%;
 }
+
+
 
 /* Media query para dispositivos móviles */
 @media only screen and (max-width: 768px) {
