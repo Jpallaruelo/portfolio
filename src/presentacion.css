@@ -99,28 +99,6 @@ label {
     font-size: 25px;
 }
 
-.contact-section {}
-
-.contact-form {
-
-    flex: 1;
-    margin-left: 200px;
-    margin-right: 40px;
-
-    /* Ajusta según sea necesario */
-    /* Ajusta según sea necesario */
-}
-
-.contact-info {
-    flex: 1;
-    margin-left: 80px;
-    /* Ajusta según sea necesario */
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
 .contact-section {
     margin-top: 90px;
     display: flex;
@@ -129,14 +107,16 @@ button:hover {
 
 .contact-form {
     flex: 1;
-    margin-left: 200px;
-    margin-right: 40px;
+    margin-left: 80px;
+    /* Márgenes a la izquierda y a la derecha */
 }
 
 .contact-info {
     flex: 1;
-    margin-left: 80px;
+   margin-right: 50px;
+    /* Márgenes a la izquierda y a la derecha */
 }
+
 
 button:hover {
     background-color: #45a049;
@@ -147,15 +127,17 @@ button:hover {
     height: auto;
     padding: 25px;
     border-radius: 50%;
-    display: flex;
-    flex-direction: column;
+
+
 }
 
 /* Establece estilos específicos para los inputs y textareas */
 .contact-form input,
 .contact-form textarea {
-    width: 80%;
-    margin-left: 30px;
+    width: 750px;
+    /* Anchura fija para los elementos del formulario */
+
+    /* Márgenes arriba y abajo */
 }
 
 .responsive-image {
@@ -174,10 +156,19 @@ button:hover {
     .contact-form,
     .contact-info {
         flex: 1;
-        margin: 0;
+        margin: 20px 0;
+        /* Márgenes arriba y abajo */
     }
 
     .contact-info img {
         margin-top: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 350px;
+        /* Anchura fija para los elementos del formulario */
+        margin: 10px 0;
+        /* Márgenes arriba y abajo */
     }
 }
