@@ -5,12 +5,13 @@
     /* Fondo negro */
     color: #fff;
     /* Texto blanco */
+    margin-bottom: 10px;
 }
 
 .profile-image-container {
     overflow: hidden;
     border-radius: 50%;
-    margin: 0 auto 20px;
+    margin: 0 auto 30px;
     width: 250px;
     /* Ajusta el tamaño de la imagen según tus necesidades */
     height: 250px;
@@ -30,11 +31,15 @@
 }
 
 .phrases {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .phrases p {
     margin: 10px 0;
+}
+
+.button {
+    margin-bottom: 20px;
 }
 
 .btn-projects {
@@ -61,6 +66,8 @@
     border-radius: 8px;
     width: 300px;
     margin: 10px;
+
+    padding-bottom: 40px;
     /* Ajusta el margen según sea necesario */
 }
 
@@ -75,6 +82,7 @@
 
 h4 {
     font-size: 50px;
+    padding-bottom: 30px;
 }
 
 li {
@@ -94,15 +102,18 @@ label {
 .contact-section {}
 
 .contact-form {
-   
+
     flex: 1;
-    padding-right: 20px;
+    margin-left: 200px;
+    margin-right: 40px;
+
+    /* Ajusta según sea necesario */
     /* Ajusta según sea necesario */
 }
 
 .contact-info {
     flex: 1;
-    padding-left: 20px;
+    margin-left: 80px;
     /* Ajusta según sea necesario */
 }
 
@@ -114,25 +125,36 @@ button:hover {
     margin-top: 90px;
     display: flex;
     justify-content: space-between;
+}
 
+.contact-form {
+    flex: 1;
+    margin-left: 200px;
+    margin-right: 40px;
+}
+
+.contact-info {
+    flex: 1;
+    margin-left: 80px;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 .contact-info img {
     width: 250px;
-    height: 250px;
+    height: auto;
     padding: 25px;
     border-radius: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
-.responsive-input {
+/* Establece estilos específicos para los inputs y textareas */
+.contact-form input,
+.contact-form textarea {
     width: 80%;
-    height: 40px;
-    margin-left: 30px;
-}
-
-.responsive-textarea {
-    width: 80%;
-    height: 100px;
     margin-left: 30px;
 }
 
@@ -140,5 +162,22 @@ button:hover {
     width: 100%;
     height: auto;
     max-width: 100%;
-    /* Asegura que la imagen no exceda el ancho del contenedor */
+}
+
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form,
+    .contact-info {
+        flex: 1;
+        margin: 0;
+    }
+
+    .contact-info img {
+        margin-top: 20px;
+    }
 }

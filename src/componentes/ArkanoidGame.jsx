@@ -15,6 +15,8 @@ const ArkanoidGame = () => {
     navigate("/portfolio");
 
   };
+
+  const audioRef = useRef(null);
   // const [timeElapsed, setTimeElapsed] = useState(0);
 
   const paddleImage = new Image();
