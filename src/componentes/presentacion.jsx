@@ -33,6 +33,7 @@ const PortfolioSection = () => {
             </div>
             <button className='button' onClick={togglenavigate}>PORTFOLIO</button>
 
+
             {/* Nueva sección con tres cartas */}
             <div className="info-section">
                 <div className="info-card">
@@ -63,34 +64,34 @@ const PortfolioSection = () => {
                 </div>
             </div>
             <div className='midle-section'>
-            <button className='button' onClick={togglenavigategame}>🎮 GAMES-PROJECTS
-                🕹️</button>
+                <button className='button' onClick={togglenavigategame}>🎮 GAMES-PROJECTS
+                    🕹️</button>
 
-            <h3>CONTACT ME!</h3>
-            <p>
-                Excited to hear from you! Reach out to me for collaborations, job opportunities, or any inquiries related to web development.
-            </p>
-            <p>
-                I'll be delighted to discuss projects and explore possibilities of working together. Let's talk!
-            </p>
+                <h3>CONTACT ME!</h3>
+                <p>
+                    Excited to hear from you! Reach out to me for collaborations, job opportunities, or any inquiries related to web development.
+                </p>
+                <p>
+                    I'll be delighted to discuss projects and explore possibilities of working together. Let's talk!
+                </p>
             </div>
-           
+
 
             <div className="contact-section">
                 <div className="contact-form">
                     <form>
                         <div className="form-group">
-                            <label htmlFor="name">NAME:</label>
+                            <label htmlFor="name">NAME</label>
                             <input type="text" id="name" name="name" required className="responsive-input" />
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="correo">MAIL:</label>
+                            <label htmlFor="correo">MAIL</label>
                             <input type="email" id="email" name="email" required className="responsive-input" />
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="message">MESSAGE:</label>
+                            <label htmlFor="message">MESSAGE</label>
                             <textarea id="message" name="message" rows="4" required className="responsive-textarea"></textarea>
                         </div>
 
@@ -103,6 +104,12 @@ const PortfolioSection = () => {
                     <img className='responsive-image' src="images/git.png" alt="Imagen de contacto" />
                     <img className='responsive-image' src="images/linkein.png" alt="Imagen de contacto" />
                     {/* <img className='responsive-image' src="images/logoapps.png" alt="Imagen de contacto" /> */}
+                </div>
+
+                <div className='contact-info'>
+                    <p>📧 jonathanpallarueloelvira92@gmail.com</p>
+                    <p> 📲657357740</p>
+                    <button className='button' onClick={togglenavigate}>CV</button>
                 </div>
             </div>
 

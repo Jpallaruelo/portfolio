@@ -66,6 +66,7 @@ const GameContainer = () => {
         />
       </div>
       <div>{renderGame()}</div>
+      <button className="button">BACK</button>
     </div>
   );
 
