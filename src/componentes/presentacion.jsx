@@ -172,6 +172,9 @@ const PortfolioSection = () => {
                 <div className="contact-form">
                     <form ref={form} onSubmit={sendEmail}>
                         <label>Name</label>
+                        {errors.user_name && (
+                            <span className="error-message">{errors.user_name}</span>
+                        )}
                         <input
                             type="text"
                             name="user_name"
@@ -180,11 +183,12 @@ const PortfolioSection = () => {
                             className={`responsive-input ${errors.user_name ? "error" : ""}`}
                         />
 
-                        {errors.user_name && (
-                            <span className="error-message">{errors.user_name}</span>
-                        )}
+                       
 
                         <label>Email</label>
+                        {errors.user_email && (
+                            <span className="error-message">{errors.user_email}</span>
+                        )}
                         <input
                             type="email"
                             name="user_email"
@@ -192,20 +196,19 @@ const PortfolioSection = () => {
                             onChange={handleChange}
                             className={`responsive-input ${errors.user_email ? "error" : ""}`}
                         />
-                        {errors.user_email && (
-                            <span className="error-message">{errors.user_email}</span>
-                        )}
+
 
                         <label>Message</label>
+                        {errors.message && (
+                            <span className="error-message">{errors.message}</span>
+                        )}
                         <textarea
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
                             className={`responsive-textarea ${errors.message ? "error" : ""}`}
                         ></textarea>
-                        {errors.message && (
-                            <span className="error-message">{errors.message}</span>
-                        )}
+                       
 
                         <div>
                             <button className="button" type="submit">
