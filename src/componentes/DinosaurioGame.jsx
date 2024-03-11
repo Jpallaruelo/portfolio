@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
+ import "../dino.css";
 
 
 const DinosaurioGame = () => {
@@ -62,7 +63,7 @@ const DinosaurioGame = () => {
     const ctx = canvas.getContext("2d");
     const groundHeight = 20;
 
-    canvas.width = 600;
+    canvas.width = 400;
     canvas.height = 250;
 
     const drawGround = () => {

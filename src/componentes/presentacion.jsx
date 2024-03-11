@@ -229,11 +229,17 @@ const PortfolioSection = () => {
                 </div>
 
                 <div className="contact-info">
-                    <img
-                        className="responsive-image"
-                        src="images/linkein.png"
-                        alt="Imagen de contacto"
-                    />
+                    <a href="https://www.linkedin.com/in/jonathanpallarueloelvira/
+                    
+                    
+                    ">
+                        <img
+                            className="responsive-image"
+                            src="images/linkein.png"
+                            alt="Imagen de contacto"
+                        />
+                    </a>
+
                     <a
                         href="https://github.com/Jpallaruelo"
                         target="_blank"
