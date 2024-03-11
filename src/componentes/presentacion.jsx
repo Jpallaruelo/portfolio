@@ -13,6 +13,13 @@ const PortfolioSection = () => {
     user_email: "",
     message: "",
   });
+
+  const numeroTelefono = "657357740"; // Reemplaza con el número de teléfono deseado
+
+  const handleWhatsAppClick = () => {
+    const url = `https://wa.me/${numeroTelefono}`;
+    window.open(url, "_blank");
+  };
   const [errors, setErrors] = useState({});
   const form = useRef();
 
@@ -144,16 +151,21 @@ const PortfolioSection = () => {
         <button className="button" onClick={togglenavigategame}>
           🎮 GAMES-PROJECTS 🕹️
         </button>
+       
 
         <h3>CONTACT ME!</h3>
+       
+
         <p>
           Excited to hear from you! Reach out to me for collaborations, job
           opportunities, or any inquiries related to web development.
         </p>
+        
         <p>
           I'll be delighted to discuss projects and explore possibilities of
           working together. Let's talk!
         </p>
+       
       </div>
 
       <div className="contact-section">
@@ -167,6 +179,7 @@ const PortfolioSection = () => {
               onChange={handleChange}
               className={`responsive-input ${errors.user_name ? "error" : ""}`}
             />
+            
             {errors.user_name && (
               <span className="error-message">{errors.user_name}</span>
             )}
@@ -197,6 +210,7 @@ const PortfolioSection = () => {
             <button className="button" type="submit">
               Send
             </button>
+           
           </form>
           <Modal
             isOpen={isSent}
@@ -218,7 +232,6 @@ const PortfolioSection = () => {
               className="responsive-image img-fluid"
               src="images/git.png"
               alt="Imagen de contacto"
-            
             />
           </a>
           <img
@@ -226,18 +239,30 @@ const PortfolioSection = () => {
             src="images/linkein.png"
             alt="Imagen de contacto"
           />
+          
+           <a className="responsive-image" href="#" onClick={handleWhatsAppClick}>
+            <img src="images/logoapps.png" alt="Icono de WhatsApp" />
+          </a>
+          
+
+         
         </div>
 
         <div className="contact-info">
           <p>📧 jonathanpallarueloelvira92@gmail.com</p>
           <p> 📲657357740</p>
-          <img src="images/yoda" alt="" />
           <a href={"/images/CV.JonathanP.pdf"} download="MiCV.pdf">
-            <button className="button">GET-CV</button>
+            <button className="buttonContact">GET-CV</button>
           </a>
+        
+         
+          
         </div>
-        <div></div>
+
+       
       </div>
+       
+     
     </div>
   );
 };

@@ -182,10 +182,41 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .buttonContact{
+    background: linear-gradient(to right, #000000, #0A0A0A, #0beee3);
+    /* Degradado de negro a azul oscuro */
+    color: #FFFFFF;
+    /* Color del texto en blanco */
+    padding: 10px 20px;
+    /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+    font-size: 16px;
+    /* Tamaño del texto */
+    border: none;
+    /* Sin borde */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima */
+    margin: 5px;
+    /* Márgenes */
+    text-align: center;
+    /* Asegura que el texto esté centrado, útil si el botón se convierte en un bloque o si el texto es largo */
+    display: inline-block;
+    /* Opción para asegurar que el botón no se estire más de lo necesario */
+    transition: background 0.3s ease;
+    margin-right: 55px;
+    /* Opcional: Añade una transición suave al pasar el mouse por encima o al hacer clic */
+  }
   
   /* Estilos específicos para dispositivos móviles */
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1px) {
     .yodaimage {
       width: 100%; /* Hace que la imagen ocupe el 100% del ancho del contenedor padre */
+    }
+
+    .buttonContact{
+
+        margin-right: 65px;
     }
   }
