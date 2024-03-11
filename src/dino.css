@@ -1,24 +1,28 @@
-/* styles.css */
-
-/* Estilos generales para todos los dispositivos */
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
 canvas {
-    display: block;
-    max-width: 100%;
-    height: auto;
+   
+    
+    width: 600px;
+    height: 700px;
+    margin-top: 50px;
+
+    /* Ocupa el ancho completo de la pantalla */
+   
+    /* Ajusta la altura automáticamente para mantener la proporción */
 }
+
+
 
 /* Estilos específicos para dispositivos móviles */
 @media only screen and (max-width: 600px) {
     body {
         flex-direction: column;
+    }
+
+    canvas {
+        width: 450px;
+        height: 240px;
+        
+       
+        /* Puedes ajustar este valor según tus necesidades */
     }
 }

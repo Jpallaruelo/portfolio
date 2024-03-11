@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
- import "../dino.css";
+import "../dino.css";
 
 
 const DinosaurioGame = () => {
@@ -207,7 +207,7 @@ const DinosaurioGame = () => {
       <div style={{ backgroundColor: "black", position: "relative" }}>
         {/* Resto del código */}
         <img
-          className="dino"
+          className="dinotecla"
           src="/images/spacio.png"
           alt="Boton Salto"
           style={{
@@ -226,8 +226,11 @@ const DinosaurioGame = () => {
         <style>
           {`
         @media only screen and (max-width: 600px) {
-          .dino {
+          .dinotecla {
             display: block !important; /* Mostrar en dispositivos móviles con ancho máximo de 600px */
+            left: "30px",
+            width: "20px",
+            height: "0px",
           }
         }
       `}
