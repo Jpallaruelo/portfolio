@@ -1,61 +1,94 @@
 // PortfolioSection.js
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "../presentacion.css";
 import { useNavigate } from "react-router-dom";
-import { Outlet, useLocation } from "react-router-dom";
-import { useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import Modal from "react-modal";
 
 const PortfolioSection = () => {
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({});
+  const form = useRef();
+
+  const closeModal = () => {
+    console.log("sale modal");
+  };
+
+  const [isSent, setIsSent] = useState(false); // Nuevo estado
 
   const togglenavigate = () => {
     navigate("/portfolio");
   };
+
   const togglenavigategame = () => {
     navigate("/juegos");
   };
 
-  //   const [formData,setformData] = useState({
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" });
+  };
 
-  //    name:"",
-  //    email:"",
-  //    message:""
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = {};
 
-  //   });
+    if (!formData.user_name.trim()) {
+      newErrors.user_name = "Name is required";
+      isValid = false;
+    }
 
-  //   const handleChange = (e) =>{
+    if (!formData.user_email.trim()) {
+      newErrors.user_email = "Email is required";
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.user_email)) {
+      newErrors.user_email = "Invalid email format";
+      isValid = false;
+    }
 
-  //     setformData({...formData,[e.target.name]:e.target.value})
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+      isValid = false;
+    }
 
-  //   }
-
-  //   const handleSubmit = async (e) => {
-  //     e.preventDefault();
-
-  //     console.log(formData)
-  //   };
-
-  const form = useRef();
+    setErrors(newErrors);
+    return isValid;
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm("service_a9m3hle", "template_spqa9pf", form.current, {
-        publicKey: "d8hjWuzKI5ptdSg7O",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          form.current.reset();
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+    if (validateForm()) {
+      emailjs
+        .sendForm("service_a9m3hle", "template_spqa9pf", form.current, {
+          publicKey: "d8hjWuzKI5ptdSg7O",
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            form.current.reset();
+            setFormData({
+              user_name: "",
+              user_email: "",
+              message: "",
+            });
+
+            setIsSent(true); // Actualiza el estado para mostrar el mensaje
+            setTimeout(() => {
+              setIsSent(false); // Oculta el mensaje después de unos segundos
+            }, 5000);
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    }
   };
 
   return (
@@ -77,16 +110,15 @@ const PortfolioSection = () => {
         PORTFOLIO
       </button>
 
-      {/* Nueva sección con tres cartas */}
       <div className="info-section">
         <div className="info-card">
-          <h4 className="p-sobremi">SKILSS</h4>
+          <h4 className="p-sobremi">SKILLS</h4>
           <p>
             React, JavaScript, HTML5/CSS3{" "}
             {/* Agrega más habilidades según sea necesario */}
           </p>
           <p>
-            Git,Boostrap,Wordpress{" "}
+            Git, Boostrap, Wordpress{" "}
             {/* Agrega más habilidades según sea necesario */}
           </p>
         </div>
@@ -98,7 +130,7 @@ const PortfolioSection = () => {
             {/* Agrega más experiencias según sea necesario */}
           </p>
           <p>
-            Junior Frontend Developer/ fullStack{" "}
+            Junior Frontend Developer/Full Stack{" "}
             {/* Agrega más experiencias según sea necesario */}
           </p>
         </div>
@@ -128,37 +160,66 @@ const PortfolioSection = () => {
         <div className="contact-form">
           <form ref={form} onSubmit={sendEmail}>
             <label>Name</label>
-            <input type="text" name="user_name" className="responsive-input" />
+            <input
+              type="text"
+              name="user_name"
+              value={formData.user_name}
+              onChange={handleChange}
+              className={`responsive-input ${errors.user_name ? "error" : ""}`}
+            />
+            {errors.user_name && (
+              <span className="error-message">{errors.user_name}</span>
+            )}
 
             <label>Email</label>
             <input
               type="email"
               name="user_email"
-              className="responsive-input"
+              value={formData.user_email}
+              onChange={handleChange}
+              className={`responsive-input ${errors.user_email ? "error" : ""}`}
             />
+            {errors.user_email && (
+              <span className="error-message">{errors.user_email}</span>
+            )}
 
             <label>Message</label>
-            <textarea name="message" className="responsive-textarea"></textarea>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              className={`responsive-textarea ${errors.message ? "error" : ""}`}
+            ></textarea>
+            {errors.message && (
+              <span className="error-message">{errors.message}</span>
+            )}
 
             <button className="button" type="submit">
               Send
             </button>
           </form>
+          <Modal
+            isOpen={isSent}
+            contentLabel="Game Completed Modal"
+            className="custom-modal"
+            overlayClassName="custom-overlay"
+          >
+            <img src="images/thanks.jpg" alt="" />
+          </Modal>
         </div>
 
         <div className="contact-info">
-          {/* Agrega la imagen aquí */}
           <img
-            className="responsive-image"
+            className="responsive-image img-fluid"
             src="images/git.png"
             alt="Imagen de contacto"
+            style={{ maxWidth: "50%", height: "auto" }}
           />
           <img
             className="responsive-image"
             src="images/linkein.png"
             alt="Imagen de contacto"
           />
-          {/* <img className='responsive-image' src="images/logoapps.png" alt="Imagen de contacto" /> */}
         </div>
 
         <div className="contact-info">
@@ -176,4 +237,5 @@ const PortfolioSection = () => {
     </div>
   );
 };
+
 export default PortfolioSection;

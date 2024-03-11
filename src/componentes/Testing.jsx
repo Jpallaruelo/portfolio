@@ -6,16 +6,13 @@ function Testing() {
   const [code, setCode] = useState("Write your tests here");
   const [output, setOutput] = useState("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const togglenavigate = () => {
+    navigate("/portfolio");
+  };
 
-    navigate('/portfolio')
-  }
-
-
-  const [testRun, setTestsRun] = useState(false)
-
+  const [testRun, setTestsRun] = useState(false);
 
   const handleCodeChange = (event) => {
     setCode(event.target.value);
@@ -115,7 +112,6 @@ function Testing() {
       userCodeFunction(jestSimulator, logResult);
     } catch (error) {
       logResult(`Error en la ejecución: ${error.message}`);
-
     }
   };
 
@@ -139,12 +135,9 @@ function Testing() {
               </div>
               <div className="right-column">
                 <p>
-                  Utilizo Jest para realizar pruebas unitarias, asegurando que
-                  cada parte individual de mi código funcione correctamente de
-                  forma aislada.
+                  I use Jest to perform unit tests, ensuring that each
+                  individual part of my code functions correctly in isolation
                 </p>
-
-
               </div>
             </div>
           </section>
@@ -157,20 +150,19 @@ function Testing() {
           onChange={handleCodeChange}
           rows={10}
           cols={80}
-
         />
         <button className="button" onClick={executeCode}>
-          Ejecutar Pruebas
+         RUN TEST
         </button>
         <button className="button" onClick={generateRandomTest}>
-          Generar Prueba Aleatoria
+         RAMDON TESTS
         </button>
         <button className="button" onClick={togglenavigate}>
           PORTFOLIO
         </button>
 
         <div className="output">
-          <h3>{testRun ? "RESULT" : "COSOLE.LOG"}</h3>
+          <h3>{testRun ? "RESULT" : "CONSOLE.LOG"}</h3>
           {output}
         </div>
       </section>

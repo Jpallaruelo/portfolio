@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import Modal from "react-modal";
 
+
 const ArkanoidGame = () => {
   const canvasRef = useRef(null);
   const navigate = useNavigate();
