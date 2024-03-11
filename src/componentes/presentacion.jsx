@@ -103,7 +103,7 @@ const PortfolioSection = () => {
             <h3 className="name">HI, I'M JONATHAN</h3>
             <div className="profile-image-container">
                 <img
-                    src="IMAGES/perfil.png"
+                    src="IMAGES/perfil.webp"
                     alt="Imagen de perfil"
                     className="profile-image"
                 />

@@ -209,25 +209,47 @@ h1 {
 
 .custom-modal {
   background-color: #000000;
-  padding: 20px;
+  padding: 15px;
+  /* Ajusta el padding para dispositivos móviles */
   border-radius: 8px;
   width: 60%;
   color: white;
-  /* Ajusta el ancho de la modal */
   max-width: 500px;
   text-align: center;
-  /* Máximo ancho que puede tener */
   box-sizing: border-box;
-  /* Asegura que el padding no afecte el ancho total */
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Centra la modal perfectamente */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Opcional: Agrega sombra para destacar la modal */
   z-index: 1000;
-  /* Asegura que la modal esté por encima de otros elementos */
+  font-size: 14px;
+  /* Ajusta el tamaño de fuente para dispositivos móviles */
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .custom-modal {
+    width: 120%;
+    height: 60px;
+    /* Ajusta el ancho de la modal para dispositivos móviles */
+    max-width: 90%;
+    /* Establece un máximo ancho del 90% en dispositivos móviles */
+    border-radius: 0;
+    /* Elimina el redondeo de las esquinas si es necesario */
+    top: 50%;
+    /* Centra verticalmente en dispositivos móviles */
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    /* Ajusta el padding para dispositivos móviles */
+
+    /* Ajusta el tamaño de fuente para dispositivos móviles */
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
 }
 
 .custom-overlay {

@@ -184,7 +184,7 @@ const DinosaurioGame = () => {
         className="custom-modal"
         overlayClassName="custom-overlay"
       >
-        <h4>HAS PERDIDO</h4>
+        <h4 className="h4-modal">HAS PERDIDO</h4>
         <button className="button" onClick={ticNavigate}>
           TICTAC
         </button>
@@ -195,7 +195,7 @@ const DinosaurioGame = () => {
           BACK
         </button>
       </Modal>
-      <canvas
+      <canvas className="canvasDino"
         ref={canvasRef}
         style={{ border: "7px solid black" }}
       />
@@ -212,10 +212,11 @@ const DinosaurioGame = () => {
           alt="Boton Salto"
           style={{
             position: "absolute",
-            bottom: "-120px",
-            left: "100px",
-            width: "250px",
-            height: "50px",
+            bottom: "-125px", // Ajusta esta posición según tus necesidades
+            left: "50%", // Centra horizontalmente la imagen
+            transform: "translateX(-50%)", // Centra horizontalmente la imagen
+            width: "90px",
+            height: "30px",
             cursor: "pointer",
             display: "none", // Ocultar por defecto en dispositivos no móviles
           }}
@@ -228,9 +229,7 @@ const DinosaurioGame = () => {
         @media only screen and (max-width: 600px) {
           .dinotecla {
             display: block !important; /* Mostrar en dispositivos móviles con ancho máximo de 600px */
-            left: "30px",
-            width: "20px",
-            height: "0px",
+     
           }
         }
       `}

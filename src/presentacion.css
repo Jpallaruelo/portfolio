@@ -25,7 +25,7 @@
 }
 
 .name {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -197,6 +197,10 @@ label {
         margin: 10px 0;
         /* Márgenes arriba y abajo */
     }
+
+    .name {
+        font-size: 40px;
+    }
 }
 
 .yodaimage {
@@ -230,9 +234,11 @@ label {
     /* Opción para asegurar que el botón no se estire más de lo necesario */
     transition: background 0.3s ease;
 }
-.button{
+
+.button {
     margin-top: 50px;
 }
+
 /* Estilos específicos para dispositivos móviles */
 @media only screen and (max-width: 1px) {
     .yodaimage {
