@@ -118,9 +118,7 @@ label {
 }
 
 
-button:hover {
-    background-color: #45a049;
-}
+
 
 .contact-info img {
     width: 250px;
@@ -137,10 +135,10 @@ button:hover {
     width: 750px;
     height: 40px;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 10px;
-    background-color: #92c8f7;
-    ;
+    background: linear-gradient(to right, #e7e4e4, #f3f3f3, #0beee3);
+
     /* Anchura fija para los elementos del formulario */
 
     /* Márgenes arriba y abajo */
@@ -169,7 +167,7 @@ label {
 
     color: red;
     padding: 10px;
-
+    font-size: 15px;
 }
 
 
@@ -210,13 +208,13 @@ label {
 }
 
 .buttonContact {
-    background: linear-gradient(to right, #000000, #0A0A0A, #0beee3);
+    background: linear-gradient(to right, #000000, #60a12b, #12fd01);
     /* Degradado de negro a azul oscuro */
     color: #FFFFFF;
     /* Color del texto en blanco */
     padding: 10px 20px;
     /* Espaciado interno (arriba/abajo, izquierda/derecha) */
-    font-size: 16px;
+    font-size: 26px;
     /* Tamaño del texto */
     border: none;
     /* Sin borde */
@@ -231,10 +229,10 @@ label {
     display: inline-block;
     /* Opción para asegurar que el botón no se estire más de lo necesario */
     transition: background 0.3s ease;
-    margin-right: 55px;
-    /* Opcional: Añade una transición suave al pasar el mouse por encima o al hacer clic */
 }
-
+.button{
+    margin-top: 50px;
+}
 /* Estilos específicos para dispositivos móviles */
 @media only screen and (max-width: 1px) {
     .yodaimage {

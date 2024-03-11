@@ -183,7 +183,7 @@ const PortfolioSection = () => {
                             className={`responsive-input ${errors.user_name ? "error" : ""}`}
                         />
 
-                       
+
 
                         <label>Email</label>
                         {errors.user_email && (
@@ -208,11 +208,11 @@ const PortfolioSection = () => {
                             onChange={handleChange}
                             className={`responsive-textarea ${errors.message ? "error" : ""}`}
                         ></textarea>
-                       
+
 
                         <div>
                             <button className="button" type="submit">
-                                Send
+                                SEND
                             </button>
 
                         </div>
@@ -258,7 +258,7 @@ const PortfolioSection = () => {
                     <p>📧 jonathanpallarueloelvira92@gmail.com</p>
                     <p> 📲657357740</p>
                     <a href={"/images/CV.JonathanP.pdf"} download="MiCV.pdf">
-                        <button className="buttonContact">GET-CV</button>
+                        <button className="button">GET-CV</button>
                     </a>
 
 
