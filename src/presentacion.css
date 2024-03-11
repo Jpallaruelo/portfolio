@@ -174,3 +174,18 @@ button:hover {
         /* Márgenes arriba y abajo */
     }
 }
+
+.yodaimage {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Estilos específicos para dispositivos móviles */
+  @media only screen and (max-width: 767px) {
+    .yodaimage {
+      width: 100%; /* Hace que la imagen ocupe el 100% del ancho del contenedor padre */
+    }
+  }

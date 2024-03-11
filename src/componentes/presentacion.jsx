@@ -204,17 +204,23 @@ const PortfolioSection = () => {
             className="custom-modal"
             overlayClassName="custom-overlay"
           >
-            <img src="images/thanks.jpg" alt="" />
+            <img className="yodaimage" src="images/thanks.jpg" alt="" />
           </Modal>
         </div>
 
         <div className="contact-info">
-          <img
-            className="responsive-image img-fluid"
-            src="images/git.png"
-            alt="Imagen de contacto"
-            style={{ maxWidth: "50%", height: "auto" }}
-          />
+          <a
+            href="https://github.com/Jpallaruelo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="responsive-image img-fluid"
+              src="images/git.png"
+              alt="Imagen de contacto"
+            
+            />
+          </a>
           <img
             className="responsive-image"
             src="images/linkein.png"
@@ -225,14 +231,12 @@ const PortfolioSection = () => {
         <div className="contact-info">
           <p>📧 jonathanpallarueloelvira92@gmail.com</p>
           <p> 📲657357740</p>
-
+          <img src="images/yoda" alt="" />
           <a href={"/images/CV.JonathanP.pdf"} download="MiCV.pdf">
             <button className="button">GET-CV</button>
           </a>
         </div>
-        <div>
-          <img src="images/" alt="" />
-        </div>
+        <div></div>
       </div>
     </div>
   );

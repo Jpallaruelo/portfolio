@@ -47,4 +47,13 @@
     .tech-details {
       flex-direction: column;
     }
+
+    .output {
+    
+      background-color: #200202;
+      padding: 10px;
+      
+      width: 93%;
+    
+    }
   }

@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import './stilostask.css';
+import { FaSearch } from "react-icons/fa";
+
 
 const TaskApp = () => {
   const [tasks, setTasks] = useState([]);
@@ -100,7 +102,9 @@ const TaskApp = () => {
   return (
     <div>
       <h3>Task App</h3>
+      
       <div>
+        
         <input
           ref={inputRef}
           type="text"
@@ -123,7 +127,9 @@ const TaskApp = () => {
             color: editingIndex !== null ? "#FFA500" : "#006400",
             fontSize: "30px",
           }}
+          
         />
+        
         <button
           className={`button ${editingIndex !== null ? "update-button" : "add-button"}`}
           onClick={handleAddOrUpdateTask}
