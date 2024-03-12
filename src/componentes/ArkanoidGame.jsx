@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import Modal from "react-modal";
-
+import "../arkanoid.css";
 
 const ArkanoidGame = () => {
   const canvasRef = useRef(null);
@@ -240,7 +240,7 @@ const ArkanoidGame = () => {
         </button>
 
       </Modal>
-      <canvas ref={canvasRef} />
+      <canvas className="arkanoid-canvas" ref={canvasRef} />
       <button className="button" onClick={handleSubmit}>
         PORTFOLIO
       </button>
