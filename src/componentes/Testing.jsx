@@ -116,7 +116,7 @@ function Testing() {
   };
 
   return (
-    <div className="container">
+    <div className="container" translate="no">
       <section className="">
         <h3>Unit Testing con Jest</h3>
         {/* Contenido de la sección */}
@@ -138,6 +138,9 @@ function Testing() {
                   I use Jest to perform unit tests, ensuring that each
                   individual part of my code functions correctly in isolation
                 </p>
+                <button className="button" onClick={generateRandomTest}>
+                  RAMDON TESTS
+                </button>
               </div>
             </div>
           </section>
@@ -152,20 +155,19 @@ function Testing() {
           cols={80}
         />
         <button className="button" onClick={executeCode}>
-         RUN TEST
-        </button>
-        <button className="button" onClick={generateRandomTest}>
-         RAMDON TESTS
-        </button>
-        <button className="button" onClick={togglenavigate}>
-          PORTFOLIO
+          RUN TEST
         </button>
 
-        <div className="output">
+       
+
+        <div className="output" >
           <h3>{testRun ? "RESULT" : "CONSOLE.LOG"}</h3>
           {output}
         </div>
       </section>
+       <button className="button" onClick={togglenavigate}>
+          PORTFOLIO
+        </button>
     </div>
   );
 }

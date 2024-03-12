@@ -192,7 +192,7 @@ label {
 
     .contact-form input,
     .contact-form textarea {
-        width: 350px;
+        width: 300px;
         /* Anchura fija para los elementos del formulario */
         margin: 10px 0;
         /* Márgenes arriba y abajo */

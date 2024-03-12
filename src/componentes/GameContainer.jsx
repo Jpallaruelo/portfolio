@@ -68,7 +68,7 @@ const GameContainer = () => {
         <GameCard
           // title="SNAKE"
           onClick={() => handleGameSelection("snake")}
-          image="images/snake.jpg"
+          image="images/snake.png"
         />
       </div>
       <div>{renderGame()}</div>

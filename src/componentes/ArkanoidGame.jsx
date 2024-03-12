@@ -227,7 +227,7 @@ const ArkanoidGame = () => {
         className="custom-modal"
         overlayClassName="custom-overlay"
       >
-        <h4>JUEGO COMPLETADO</h4>
+        <h4 className="h4-modal">JUEGO COMPLETADO</h4>
 
         <button className="button" onClick={closeDino}>
           DINO
