@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Board from "./Board";
+import '../tiactac.css'
 
 const calculateWinner = (squares) => {
   // Arreglos de líneas ganadoras

@@ -4,7 +4,7 @@ import Square from "../componentes/square";
 
 const Board = ({ squares, onClick }) => {
   const renderSquare = (i) => (
-    <Square value={squares[i]} onClick={() => onClick(i)} />
+    <Square className="square" value={squares[i]} onClick={() => onClick(i)} />
   );
 
   return (

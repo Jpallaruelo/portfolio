@@ -1,4 +1,5 @@
 import React from "react";
+import "../tiactac.css"
 
 // const Square = ({ value, onClick }) => {
 //   return (
@@ -8,9 +9,12 @@ import React from "react";
 //   );
 // };
 const Square = ({ value, onClick }) => {
-  return <button className="square" onClick={onClick}>
+  <div className="square">
+  return <button  onClick={onClick}>
    {value}
   </button>;
+
+  </div>
 };
 
 export default Square;

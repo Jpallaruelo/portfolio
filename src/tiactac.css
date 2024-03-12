@@ -1,0 +1,72 @@
+.game {
+    text-align: center;
+    margin: 10px;
+  }
+  
+ 
+    .game-info {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  
+    .square {
+      width: 10px; /* Modifica el tamaño de los squares para dispositivos móviles */
+      height: 10px; /* Modifica el tamaño de los squares para dispositivos móviles */
+      font-size: 12px;
+      line-height: 20px; /* Ajusta el line-height según sea necesario */
+    }
+  
+  
+  .game h1 {
+    font-size: 18px;
+  }
+  
+  .game-board {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .game-info {
+    margin-left: 10px;
+  }
+  
+  .board-row {
+    display: flex;
+  }
+  
+  .board-row:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .square {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin-right: -1px;
+    margin-top: -1px;
+    background-color: #f9f9f9;
+    float: left;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .game {
+      margin: 5px;
+    }
+  
+    .game h1 {
+      font-size: 14px;
+    }
+  
+    .game-board {
+      flex-direction: column;
+      width: 60px;
+      height: 20px;
+    }
+  
+}

@@ -263,10 +263,6 @@ h1 {
   /* Asegura que el overlay esté justo debajo de la modal */
 }
 
-.board-row {
-  display: flex;
-}
-
 /* Estilos para las casillas */
 .square {
   width: 140px;
@@ -288,11 +284,21 @@ h1 {
   /* Cambia el cursor a un puntero para indicar que es clickable */
 }
 
+@media only screen and (max-width: 600px) {
+  .square {
+    width: 20px; /* Ajusta el tamaño de la casilla para dispositivos móviles */
+    height: 20px; /* Ajusta el tamaño de la casilla para dispositivos móviles */
+    font-size: 10px; /* Ajusta el tamaño del texto para dispositivos móviles */
+    line-height: 30px; /* Ajusta el line-height para dispositivos móviles */
+  }
+}
+
 .square:focus {
   outline: none;
   /* Elimina el borde que aparece al hacer clic en las casillas */
 }
 
+/* Resto de tus estilos */
 .game {
   display: flex;
   flex-direction: column;
@@ -307,8 +313,7 @@ h2 {
   font-size: 40px;
 }
 
-/* tablero ajedrez */
-
+/* Tablero ajedrez */
 .board {
   width: fit-content;
   margin: 40px auto;
