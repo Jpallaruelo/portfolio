@@ -36,11 +36,12 @@ import ScrollToTop from "./componentes/Scroll";
 
 
 function App() {
+
   return (
 
     <Router>
       <ScrollToTop>
-        <div className="App">
+        <div translate="no" className="App">
           <Routes>
             {/* Utiliza el componente Inicio como página de inicio */}
             <Route path="/" element={<Porfoliopresentacion />} />

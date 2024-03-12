@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.App.light {
+  background-color: #61dafb;
+  /* Color primario de React */
+  color: black;
+  /* Color de texto */
+}
+
 .App-logo {
 
   pointer-events: none;

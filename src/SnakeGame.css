@@ -25,3 +25,33 @@
   height: 2%;
   background-color: rgb(234, 0, 255);
 }
+
+.vertical-controls {
+  margin-bottom: 20px;
+  /* Agregar espacio entre las columnas verticales */
+}
+
+.horizontal-controls {
+  display: flex;
+  justify-content: space-around;
+  /* Distribuir el espacio alrededor de los elementos */
+}
+
+.controls {
+  display: none;
+  margin-top: 40px;
+  /* Ocultar el div de controles por defecto */
+}
+
+/* Mostrar el div de controles solo en dispositivos móviles */
+@media only screen and (max-width: 767px) {
+  .controls {
+    display: block;
+  }
+
+  .direction-arrow{
+
+    width: 35px;
+    height: auto;
+  }
+}

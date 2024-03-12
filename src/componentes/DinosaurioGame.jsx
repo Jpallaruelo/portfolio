@@ -208,7 +208,7 @@ const DinosaurioGame = () => {
         {/* Resto del código */}
         <img
           className="dinotecla"
-          src="/images/spacio.png"
+          src="/images/spaciotecla.png"
           alt="Boton Salto"
           style={{
             position: "absolute",
