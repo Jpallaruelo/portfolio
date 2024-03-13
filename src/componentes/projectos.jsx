@@ -31,7 +31,7 @@ const ProjectosPage = () => {
     const projects = [
         { id: 2, title: "USE - EFFECT", image: "images/particles.webp", path: "/particles" },
         { id: 1, title: "TODO - LIST", image: "images/task.jpg", path: "/tareas" },
-        { id: 4, title: "REDUX - CART", image: "images/redux.jpg", path: "/cartMain" },
+        { id: 4, title: "REDUX - CART", image: "images/redux.jpg", path: "/tienda" },
         { id: 3, title: "FETCH - API", image: "images/cryptos.jpg", path: "/cryptos" },
         // { id: 4, title: "P-GENERATE", image: "images/password.webp", path: "/card" },
         // Agrega aquí más proyectos según necesites

@@ -1,0 +1,59 @@
+.cards-carrito {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 150px;
+    /* Alinea las tarjetas a la izquierda en escritorio */
+}
+
+.card {
+    width: 300px;
+    /* Ancho fijo para las tarjetas */
+    margin: 10px;
+    /* Margen entre tarjetas */
+    border: 1px solid #ccc;
+    /* Borde alrededor de la tarjeta */
+    border-radius: 8px;
+    /* Bordes redondeados para suavizar la apariencia */
+    overflow: hidden;
+    /* Ocultar cualquier contenido que se desborde */
+    display: flex;
+    /* Utiliza flexbox para colocar la imagen arriba y el contenido abajo */
+    flex-direction: column;
+    /* Apila el contenido verticalmente */
+}
+
+.card-image {
+    width: 100%;
+    /* Asegurar que la imagen llene completamente la tarjeta */
+    height: 100%;
+}
+
+.card-content {
+    padding: 10px;
+    /* Relleno interno para el contenido de la tarjeta */
+}
+
+.card h3 {
+    margin-top: 0;
+    /* Eliminar el margen superior predeterminado del título */
+}
+
+.card p {
+    margin: 5px 0;
+    /* Espaciado entre el texto y otros elementos */
+}
+
+@media (max-width: 768px) {
+    .cards-carrito {
+        flex-direction: column;
+        /* Alinea las tarjetas en una columna en dispositivos móviles */
+    }
+
+    .card {
+        width: 70%;
+        height: 70%;
+        margin-left: 60px;
+        /* Ancho completo para las tarjetas en dispositivos móviles */
+    }
+}

@@ -33,6 +33,7 @@ import BackPage from "./aboutMePages/back";
 import TaskApp from "./projectsFront/task";
 import Porfoliopresentacion from "./componentes/presentacion";
 import ScrollToTop from "./componentes/Scroll";
+import Tienda from "./componentes/Tienda";
 
 
 function App() {
@@ -47,8 +48,8 @@ function App() {
             <Route path="/" element={<Porfoliopresentacion />} />
             <Route path="/portfolio" element={<Inicio />} />
 
-            <Route path="/cartMain" element={<ItemList />}></Route>
-            <Route path="/cart" element={<ShoopingCart />}></Route>
+
+
 
             <Route path="/login" element={<Login />} />
             <Route path="/particles" element={<ParticlesJsComponent />} />
@@ -68,6 +69,7 @@ function App() {
 
             <Route path="/juegos/tictac" element={<AppTictac />} />
             <Route path="/juegos/snake" element={<SnakeGame />} />
+            <Route path="/tienda" element={<Tienda></Tienda>}></Route>
           </Routes>
         </div>
       </ScrollToTop>

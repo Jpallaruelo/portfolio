@@ -1,0 +1,35 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* Distribuye los elementos uniformemente */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    padding: 10px 20px;
+    /* Añade relleno interno al navbar */
+    background-color: #6cf5f9;
+    /* Color de fondo del navbar */
+}
+
+.logoimage {
+    width: 100px;
+    /* Ancho del logo */
+    height: auto;
+    /* Altura automática para mantener la proporción */
+}
+
+.carrito-image {
+    width: 50px;
+    /* Ancho del icono del carrito */
+    height: auto;
+    /* Altura automática para mantener la proporción */
+    margin-left: auto;
+    margin-right: 300px;
+    /* Empuja el icono del carrito hacia la derecha */
+}
+
+@media (max-width: 768px) {
+    .carrito-image {
+        margin-right: 0;
+        /* Elimina el margen derecho en dispositivos móviles */
+    }
+}
