@@ -96,12 +96,12 @@ const SnakeGame = () => {
 
   const closeGame = () => {
     setGameCompleted(false);
-    navigate("/");
+    navigate("/juegos");
   };
 
   return (
     <>
-      <div className="game-area">
+      <div translate="no" className="game-area">
         {snake.map((segment, index) => (
           <div
             key={index}
@@ -139,18 +139,23 @@ const SnakeGame = () => {
           />
         </div>
         <div className="vertical-controls">
-
+       
           <img
             className="direction-arrow"
             src="/images/flechaabajo.png"
             alt="Down Arrow"
             onClick={() => handleDirectionChange("DOWN")}
           />
-        </div>
+          <div>
 
-        <button className="button" onClick={closeGame}>
+          </div>
+
+          <button className="button" onClick={closeGame}>
           BACK
         </button>
+        </div>
+
+       
       </div>
       <Modal
         isOpen={isGameCompleted}
@@ -158,7 +163,7 @@ const SnakeGame = () => {
         className="custom-modal"
         overlayClassName="custom-overlay"
       >
-        <h3 className="modaltext">YOU LOSE!</h3>
+        <h3  className="modaltext">GAME OVER!</h3>
         <button className="button" onClick={closeGame}>
           BACK
         </button>

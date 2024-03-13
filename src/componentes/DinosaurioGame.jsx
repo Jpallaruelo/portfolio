@@ -184,7 +184,7 @@ const DinosaurioGame = () => {
         className="custom-modal"
         overlayClassName="custom-overlay"
       >
-        <h4 className="h4-modal">HAS PERDIDO</h4>
+        <h4 className="h4-modal">GAME-OVER</h4>
         <button className="button" onClick={ticNavigate}>
           TICTAC
         </button>

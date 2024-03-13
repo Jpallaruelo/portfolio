@@ -15,8 +15,6 @@ const GameContainer = () => {
     navigate(route);
   };
 
-
-
   const navigate = useNavigate();
   // Puedes expandir esto para incluir más juegos
   const renderGame = () => {
@@ -32,7 +30,6 @@ const GameContainer = () => {
       case "snake":
         return <SnakeGame />;
 
-
       default:
         return <p></p>;
     }
@@ -44,12 +41,25 @@ const GameContainer = () => {
   };
 
   return (
-    <div style={{ backgroundColor: 'black', padding: '20px' }}>
+    <div style={{ backgroundColor: "black", padding: "20px" }}>
       <h3>Choose a Game to Play</h3>
-      <p style={{ textAlign: 'center', margin: '0 auto 20px', maxWidth: '600px' }}>
+      <p
+        style={{
+          textAlign: "center",
+          margin: "0 auto 20px",
+          maxWidth: "600px",
+        }}
+      >
         Explore my collection of games created with React.
       </p>
-      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '60px' }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          gap: "60px",
+        }}
+      >
         <GameCard
           // title="ARKANOID"
           onClick={() => handleGameSelection("arkanoid")}
@@ -72,11 +82,17 @@ const GameContainer = () => {
         />
       </div>
       <div>{renderGame()}</div>
-      <button className="button" onClick={() => handleButtonClick('/portfolio')}>BACK</button>
-      <button className="button" onClick={() => handleButtonClick('/testing')}>TESTING</button>
+      <button
+        className="button"
+        onClick={() => handleButtonClick("/portfolio")}
+      >
+        BACK
+      </button>
+      <button className="button" onClick={() => handleButtonClick("/testing")}>
+        TESTING
+      </button>
     </div>
   );
-
 };
 
 export default GameContainer;
