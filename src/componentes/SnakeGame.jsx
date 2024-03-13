@@ -147,6 +147,10 @@ const SnakeGame = () => {
             onClick={() => handleDirectionChange("DOWN")}
           />
         </div>
+
+        <button className="button" onClick={closeGame}>
+          BACK
+        </button>
       </div>
       <Modal
         isOpen={isGameCompleted}
