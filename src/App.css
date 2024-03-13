@@ -215,12 +215,12 @@ h1 {
 /* ArkanoidGame.css */
 
 .custom-modal {
-  background-color: #000000;
+  background-color: #84e2f3;
   padding: 15px;
   /* Ajusta el padding para dispositivos móviles */
   border-radius: 8px;
   width: 60%;
-  color: white;
+  color: rgb(0, 0, 0);
   max-width: 500px;
   text-align: center;
   box-sizing: border-box;
@@ -238,7 +238,7 @@ h1 {
 @media only screen and (max-width: 600px) {
   .custom-modal {
     width: 120%;
-    height: 60px;
+    height: 120px;
     /* Ajusta el ancho de la modal para dispositivos móviles */
     max-width: 90%;
     /* Establece un máximo ancho del 90% en dispositivos móviles */

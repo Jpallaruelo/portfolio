@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
+import '../SnakeGame.css';
 
 const SnakeGame = () => {
   const [snake, setSnake] = useState([{ x: 10, y: 10 }]);
@@ -153,7 +154,7 @@ const SnakeGame = () => {
         className="custom-modal"
         overlayClassName="custom-overlay"
       >
-        <h4>HAS MUERTO</h4>
+        <h3 className="modaltext">YOU LOSE!</h3>
         <button className="button" onClick={closeGame}>
           BACK
         </button>
