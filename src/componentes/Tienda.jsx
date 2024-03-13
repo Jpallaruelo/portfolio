@@ -9,7 +9,7 @@ const availableProducts = [
         title: 'El Señor de los Anillos',
         author: 'J.R.R. Tolkien',
         price: 25.99,
-        image: '/images/libroreact.jpg'
+        image: '/images/librolaravel.jpg'
     },
     {
         id: 2,

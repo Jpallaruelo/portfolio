@@ -8,6 +8,7 @@
 
 .card {
     width: 300px;
+
     /* Ancho fijo para las tarjetas */
     margin: 10px;
     /* Margen entre tarjetas */
@@ -27,6 +28,7 @@
     width: 100%;
     /* Asegurar que la imagen llene completamente la tarjeta */
     height: 100%;
+    /* Altura automática para mantener la proporción de la imagen */
 }
 
 .card-content {
@@ -46,14 +48,25 @@
 
 @media (max-width: 768px) {
     .cards-carrito {
-        flex-direction: column;
-        /* Alinea las tarjetas en una columna en dispositivos móviles */
+        justify-content: flex-start;
+        /* Alinea las tarjetas a la izquierda en dispositivos móviles */
+        margin-top: 35px;
+        /* Ajusta el margen superior */
     }
 
     .card {
-        width: 70%;
-        height: 70%;
-        margin-left: 60px;
-        /* Ancho completo para las tarjetas en dispositivos móviles */
+        width: 50%;
+        height: 80%;
+        /* Dos tarjetas por fila en dispositivos móviles */
+        margin-left: 120px;
+        /* Restablece el margen */
     }
+
+    .card-image {
+        width: 100%;
+        /* Asegurar que la imagen llene completamente la tarjeta */
+        height: 100%;
+        /* Altura automática para mantener la proporción de la imagen */
+    }
+
 }
