@@ -1,16 +1,14 @@
-// src/Board.js
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
-// Asegúrate de crear este archivo CSS para los estilos
 
 const SnakeGame = () => {
   const [snake, setSnake] = useState([{ x: 10, y: 10 }]);
   const [food, setFood] = useState({ x: 5, y: 5 });
   const [direction, setDirection] = useState();
   const [speed, setSpeed] = useState(200);
-  const [isGameCompleted, setGameCompleted] = useState(false)
-  const navigate = useNavigate()
+  const [isGameCompleted, setGameCompleted] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleKeyPress = (e) => {
@@ -31,11 +29,9 @@ const SnakeGame = () => {
           break;
       }
     };
-    window.addEventListener("keydown", handleKeyPress);
 
-    // return () => {
-    //   window.removeEventListener("keydown", handleKeyPress);
-    // };
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
   }, []);
 
   useEffect(() => {
@@ -60,34 +56,27 @@ const SnakeGame = () => {
           break;
       }
 
-      // Verificar colisiones con los bordes
       const isOutOfBounds =
         head.x < 0 || head.x >= 50 || head.y < 0 || head.y >= 50;
 
       if (isOutOfBounds) {
-        // Reiniciar el juego si la serpiente colisiona con los bordes
         setSnake([{ x: 10, y: 10 }]);
         setFood({ x: 5, y: 5 });
         setDirection();
-        // alert("has muerto")
-        setGameCompleted(true)
+        setGameCompleted(true);
         setSpeed(200);
         return;
       }
 
-      // Verificar si la cabeza coincide con la posición de la comida
       if (head.x === food.x && head.y === food.y) {
-        // Si ha comido la comida, agrega un nuevo segmento a la serpiente
         newSnake.unshift({ x: food.x, y: food.y });
 
-        // Genera una nueva posición para la comida
         const newFood = {
           x: Math.floor(Math.random() * 20),
           y: Math.floor(Math.random() * 20),
         };
         setFood(newFood);
       } else {
-        // Si no ha comido la comida, mueve la serpiente y quita el último segmento
         newSnake.unshift(head);
         newSnake.pop();
       }
@@ -100,22 +89,15 @@ const SnakeGame = () => {
     return () => clearInterval(gameLoop);
   }, [snake, direction, speed, food]);
 
-  const closeDino = () => {
-    setGameCompleted(false);
-    navigate("/juegos/Dinosaurio");
+  const handleDirectionChange = (newDirection) => {
+    setDirection(newDirection);
   };
-  const closeTicTac = () => {
-    setGameCompleted(false);
-    navigate("/juegos/tictac");
-  };
-  const closeModal = () => {
-    setGameCompleted(false);
-    navigate("/juegos/snake");
-  };
-  const closefinish = () => {
+
+  const closeGame = () => {
     setGameCompleted(false);
     navigate("/");
   };
+
   return (
     <>
       <div className="game-area">
@@ -130,43 +112,53 @@ const SnakeGame = () => {
           className="food"
           style={{ left: `${food.x * 2}%`, top: `${food.y * 2}%` }}
         />
-
-
-
-
-        <Modal
-          isOpen={isGameCompleted}
-
-          contentLabel="Game Completed Modal"
-          className="custom-modal"
-          overlayClassName="custom-overlay"
-        >
-          <h4>HAS MUERTO</h4>
-
-          <button className="button" onClick={closeDino}>
-            DINO
-          </button>
-          <button className="button" onClick={closeTicTac}>
-            TICTAC
-          </button>
-          <button className="button" onClick={closeModal}>
-            SNAKE
-          </button>
-
-
-        </Modal>
       </div>
-      <button className="button" onClick={closefinish}>
-        BACK
-      </button>
+      <div className="controls">
+        <div className="vertical-controls">
 
+          <img
+            className="direction-arrow"
+            src="/images/flechaarriba.png"
+            alt="Up Arrow"
+            onClick={() => handleDirectionChange("UP")}
+          />
+        </div>
+        <div className="horizontal-controls">
+          <img
+            className="direction-arrow"
+            src="/images/flechaizquierda.png"
+            alt="Left Arrow"
+            onClick={() => handleDirectionChange("LEFT")}
+          />
+          <img
+            className="direction-arrow"
+            src="/images/flechaderecha.png"
+            alt="Right Arrow"
+            onClick={() => handleDirectionChange("RIGHT")}
+          />
+        </div>
+        <div className="vertical-controls">
+
+          <img
+            className="direction-arrow"
+            src="/images/flechaabajo.png"
+            alt="Down Arrow"
+            onClick={() => handleDirectionChange("DOWN")}
+          />
+        </div>
+      </div>
+      <Modal
+        isOpen={isGameCompleted}
+        contentLabel="Game Completed Modal"
+        className="custom-modal"
+        overlayClassName="custom-overlay"
+      >
+        <h4>HAS MUERTO</h4>
+        <button className="button" onClick={closeGame}>
+          BACK
+        </button>
+      </Modal>
     </>
-
-
-
-
-
-
   );
 };
 
