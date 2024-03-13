@@ -1,50 +1,33 @@
-/* Estilos comunes para .editing, .adding, .focused, .editing.focused, .adding.focused */
-.editing,
-.adding,
-.focused,
-.editing.focused,
-.adding.focused {
+/* Estilos base */
+/* Estilos base */
+.input-style {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    color: #006400;
+    font-size: 20px;
     border-width: 2px;
     border-style: solid;
-    border-radius: 5px;
+    width: 40%;
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
 }
 
-/* Estilos específicos para cada estado */
-.editing {
-    border-color: #ff00c8;
-}
+.classvoz{
 
-.adding {
-    border-color: #008000;
-}
-
-.focused {
-    border-color: #007bff !important;
-}
-
-.editing.focused {
-    border-color: #FFD700 !important;
-}
-
-.adding.focused {
-    border-color: #008000 !important;
+    display: none;
 }
 
 /* Media query para dispositivos móviles */
 @media (max-width: 767px) {
+    .input-style {
+        font-size: 16px; /* Reducir tamaño de fuente para dispositivos móviles */
+        padding: 3px; /* Reducir el padding para dispositivos móviles */
+        width: 80%;
+    }
 
-    .editing,
-    .adding,
-    .focused,
-    .editing.focused,
-    .adding.focused {
-        width: calc(100% - 20px);
-        /* Ajusta el ancho y resta 20px para dejar espacio alrededor */
-        margin: 10px 0;
-        /* Ajusta el margen para dispositivos móviles */
-        font-size: 16px;
-        /* Ajusta el tamaño de la fuente para mejorar la legibilidad */
-        padding: 8px;
-        /* Ajusta el relleno para un aspecto más compacto */
+    .classvoz{
+        margin-left: 85px;
+        display: block;
     }
 }

@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
-import './stilostask.css';
+import "./stilostask.css";
 import { FaSearch } from "react-icons/fa";
-
 
 const TaskApp = () => {
   const [tasks, setTasks] = useState([]);
@@ -18,11 +17,12 @@ const TaskApp = () => {
       inputRef.current.focus();
     }
 
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const SpeechRecognition =
+      window.SpeechRecognition || window.webkitSpeechRecognition;
     if (SpeechRecognition) {
       const recognition = new SpeechRecognition();
       recognition.continuous = true;
-      recognition.lang = 'es-ES';
+      recognition.lang = "es-ES";
       recognition.interimResults = false;
 
       recognition.onstart = () => {
@@ -30,7 +30,8 @@ const TaskApp = () => {
       };
 
       recognition.onresult = (event) => {
-        const transcript = event.results[event.resultIndex][0].transcript.trim();
+        const transcript =
+          event.results[event.resultIndex][0].transcript.trim();
         setNewTask(transcript);
         // Detener automáticamente el reconocimiento de voz al recibir una transcripción
         recognition.stop();
@@ -47,7 +48,9 @@ const TaskApp = () => {
 
       recognitionRef.current = recognition;
     } else {
-      console.log("La API de reconocimiento de voz no es soportada en este navegador.");
+      console.log(
+        "La API de reconocimiento de voz no es soportada en este navegador."
+      );
     }
   }, []);
 
@@ -102,9 +105,8 @@ const TaskApp = () => {
   return (
     <div>
       <h3>Task App</h3>
-      
+
       <div>
-        
         <input
           ref={inputRef}
           type="text"
@@ -117,21 +119,18 @@ const TaskApp = () => {
           }}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          placeholder={editingIndex !== null ? "Update the task..." : "Add a new task..."}
-          className={editingIndex !== null ? "editing" : "adding"}
-          style={{
-            padding: "0px",
-            margin: "10px 0",
-            borderRadius: "10px",
-            backgroundColor: "#FFFFFF",
-            color: editingIndex !== null ? "#FFA500" : "#006400",
-            fontSize: "30px",
-          }}
-          
+          placeholder={
+            editingIndex !== null ? "Update the task..." : "Add a new task..."
+          }
+          className={`input-style ${
+            editingIndex !== null ? "editing" : "adding"
+          } ${focused ? "focused" : ""}`}
         />
-        
+
         <button
-          className={`button ${editingIndex !== null ? "update-button" : "add-button"}`}
+          className={`button ${
+            editingIndex !== null ? "update-button" : "add-button"
+          }`}
           onClick={handleAddOrUpdateTask}
         >
           {editingIndex !== null ? "Update" : "Add"}
@@ -140,8 +139,10 @@ const TaskApp = () => {
           Clear
         </button>
       </div>
-      <button className="button" onClick={toggleVoiceRecognition}>
-        {recognitionRef.current && recognitionRef.current.isStarted ? "Stop Voice Recognition" : "Start Voice Recognition"}
+      <button className="classvoz button" onClick={toggleVoiceRecognition}>
+        {recognitionRef.current && recognitionRef.current.isStarted
+          ? "Stop Voice Recognition"
+          : "Start Voice Recognition"}
       </button>
       <ul>
         {tasks.map((task, index) => (
@@ -149,7 +150,12 @@ const TaskApp = () => {
             {task}
             <FontAwesomeIcon
               icon={faTrash}
-              style={{ marginLeft: "10px", cursor: "pointer", padding: "2px", color: "red" }}
+              style={{
+                marginLeft: "10px",
+                cursor: "pointer",
+                padding: "2px",
+                color: "red",
+              }}
               onClick={() => handleDeleteTask(index)}
             />
             <FontAwesomeIcon
