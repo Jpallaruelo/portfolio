@@ -34,6 +34,7 @@ import TaskApp from "./projectsFront/task";
 import Porfoliopresentacion from "./componentes/presentacion";
 import ScrollToTop from "./componentes/Scroll";
 import Tienda from "./componentes/Tienda";
+import Shop from "./componentes/shopingcart";
 
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
             <Route path="/juegos/tictac" element={<AppTictac />} />
             <Route path="/juegos/snake" element={<SnakeGame />} />
             <Route path="/tienda" element={<Tienda></Tienda>}></Route>
+            <Route path="/shop" element={<Shop></Shop>}></Route>
           </Routes>
         </div>
       </ScrollToTop>
