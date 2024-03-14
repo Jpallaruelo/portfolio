@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart, increaseQuantity } from "./cartslice";
-import { FaTimes, FaPlus } from "react-icons/fa"; // Importa FaTimes desde react-icons/fa
+import { removeFromCart, increaseQuantity, decreaseQuantity } from "./cartslice"; // Importa decreaseQuantity desde tu slice
+import { FaTimes, FaPlus,FaMinus } from "react-icons/fa"; // Importa FaTimes desde react-icons/fa
 import "../table.css"; // Importa los estilos CSS
 import { useNavigate } from "react-router-dom";
 
@@ -10,9 +10,9 @@ const Shop = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const navigate = useNavigate();
 
-  const toggleNavigte = () => {
+  const toggleNavigate = () => {
     navigate("/tienda");
-    console.log("navegar")
+    console.log("navegar");
   };
 
   const handleRemoveFromCart = (id) => {
@@ -21,6 +21,10 @@ const Shop = () => {
 
   const handleIncreaseQuantity = (id) => {
     dispatch(increaseQuantity({ id }));
+  };
+
+  const handleDecreaseQuantity = (id) => {
+    dispatch(decreaseQuantity({ id })); // Despacha la acción decreaseQuantity con el ID del artículo
   };
 
   // Calcular la cantidad total de artículos y el precio total
@@ -38,7 +42,7 @@ const Shop = () => {
       <h3>
         Products{" "}
         <img
-          onClick={() => toggleNavigte()}
+          onClick={() => toggleNavigate()}
           className="logoimagecarrito"
           src="/images/libroslogo.webp"
           alt=""
@@ -67,6 +71,10 @@ const Shop = () => {
               <td>{item.title}</td>
               <td>
                 {item.quantity}
+                <FaMinus
+                  className="icon-minus"
+                  onClick={() => handleDecreaseQuantity(item.id)} // Llama a la función para disminuir la cantidad
+                />
                 <FaPlus
                   className="icon-plus"
                   onClick={() => handleIncreaseQuantity(item.id)}
@@ -85,8 +93,9 @@ const Shop = () => {
       {/* Div que muestra la cantidad total de artículos y el precio total */}
       <div className="cart-summary">
         <p>Total Items: {totalQuantity}</p>
-        <p>Total Price: ${totalPrice.toFixed(2)}</p>
+        <p>Total Price: {totalPrice.toFixed(2)} € </p>
       </div>
+      <button className="button">BY</button>
     </div>
   );
 };

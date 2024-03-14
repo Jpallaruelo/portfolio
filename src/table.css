@@ -46,12 +46,24 @@
     
 }
 
+.icon-minus{
+
+    margin-left: 5px;
+}
+
 .logoimagecarrito{
 
     width: 35px;
     height: 35px;
 }
 
+.cart-summary{
+    margin-top: 80px;
+}
+.badge{
+    font-size: 20px;
+    color: green;
+}
 /* Consulta de medios para dispositivos móviles */
 @media screen and (max-width: 768px) {
     .table {
@@ -67,6 +79,16 @@
 
     .icon-plus{
         padding: 3px;
+        margin-top: 4px;
         
+    }
+
+    .icon-minus{
+        padding: 3px;
+        margin-top: 4px;
+    }
+
+    .cart-summary{
+        margin-top: 60px;
     }
 }
