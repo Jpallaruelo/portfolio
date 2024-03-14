@@ -2,6 +2,7 @@
 .table-container {
     margin-top: 20px;
     overflow-x: auto; /* Agregamos un scroll horizontal en dispositivos pequeños */
+    padding: 25px;
 }
 
 .table {
@@ -16,12 +17,12 @@
 
 .table th, .table td {
     padding: 8px;
-    border: 1px solid #dddddd;
+    border: 1px solid #5be0f1;
     color: white;
 }
 
 .table th {
-    background-color: #f2f2f2;
+    background-color: #08e8f8;
     font-weight: bold;
 }
 
@@ -33,11 +34,28 @@
     height: auto; /* Ajustamos automáticamente el alto de la imagen */
 }
 
+.icon-x{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+
+}
+
+.icon-plus{
+    margin-left: 5px;
+    
+}
+
+.logoimagecarrito{
+
+    width: 35px;
+    height: 35px;
+}
+
 /* Consulta de medios para dispositivos móviles */
 @media screen and (max-width: 768px) {
     .table {
         margin: 5px;
-        padding: 5px; /* Margen y relleno a los lados de la tabla en dispositivos móviles */
         max-width: calc(100vw - 10px); /* Ancho máximo de la tabla igual al ancho de la pantalla menos el margen */
     }
 
@@ -45,5 +63,10 @@
         padding: 5px;
         width: 100%; /* Ancho completo del contenedor */
         overflow-x: auto; /* Agregamos un scroll horizontal si es necesario */
+    }
+
+    .icon-plus{
+        padding: 3px;
+        
     }
 }
