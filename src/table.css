@@ -1,0 +1,49 @@
+/* Estilos base para la tabla */
+.table-container {
+    margin-top: 20px;
+    overflow-x: auto; /* Agregamos un scroll horizontal en dispositivos pequeños */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px; /* Relleno dentro de la tabla */
+    overflow-x: hidden; /* Ocultar el desbordamiento horizontal en dispositivos móviles */
+}
+
+.table th, .table td {
+    padding: 8px;
+    border: 1px solid #dddddd;
+    color: white;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Estilos para las imágenes */
+.product-image {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto; /* Ajustamos automáticamente el ancho de la imagen */
+    height: auto; /* Ajustamos automáticamente el alto de la imagen */
+}
+
+/* Consulta de medios para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .table {
+        margin: 5px;
+        padding: 5px; /* Margen y relleno a los lados de la tabla en dispositivos móviles */
+        max-width: calc(100vw - 10px); /* Ancho máximo de la tabla igual al ancho de la pantalla menos el margen */
+    }
+
+    .table-container {
+        padding: 5px;
+        width: 100%; /* Ancho completo del contenedor */
+        overflow-x: auto; /* Agregamos un scroll horizontal si es necesario */
+    }
+}

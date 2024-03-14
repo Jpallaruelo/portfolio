@@ -15,6 +15,8 @@ const cartSlice = createSlice({
             } else {
                 state.items.push({ ...action.payload, quantity: 1 });
             }
+
+            console.log("Se ha añadido al carrito:", action.payload);
         },
         removeFromCart: (state, action) => {
             const { id } = action.payload;

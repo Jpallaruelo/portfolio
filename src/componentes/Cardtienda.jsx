@@ -1,5 +1,6 @@
 import React from 'react';
-import '../Cardproducts.css'; // Importa el archivo de estilos CSS
+import '../Cardproducts.css'; 
+import { addToCart } from './cartslice'; // Importa la acción addToCart desde tu slice de Redux
 
 const Products = ({ product, addToCart }) => {
     return (

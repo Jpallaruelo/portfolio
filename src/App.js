@@ -15,6 +15,9 @@ import AppTictac from "./componentes/AppTictac";
 import Snake from "./componentes/SnakeGame";
 import SnakeGame from "./componentes/SnakeGame";
 
+import { Provider } from 'react-redux';
+import store from './componentes/store'; // Importa tu tienda Redux
+
 
 import "./SnakeGame.css";
 import "./Tareas.css";
@@ -40,7 +43,8 @@ import Shop from "./componentes/shopingcart";
 function App() {
 
   return (
-
+      
+    <Provider store={store}>
     <Router>
       <ScrollToTop>
         <div translate="no" className="App">
@@ -76,6 +80,7 @@ function App() {
         </div>
       </ScrollToTop>
     </Router>
+    </Provider>
 
   );
 }
