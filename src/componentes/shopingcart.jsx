@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart, increaseQuantity, decreaseQuantity } from "./cartslice"; // Importa decreaseQuantity desde tu slice
-import { FaTimes, FaPlus,FaMinus } from "react-icons/fa"; // Importa FaTimes desde react-icons/fa
-import "../table.css"; // Importa los estilos CSS
+import { removeFromCart, increaseQuantity, decreaseQuantity, removeAllFromCart } from "./cartslice";
+import { FaTimes, FaPlus, FaMinus } from "react-icons/fa";
+import "../table.css";
 import { useNavigate } from "react-router-dom";
 
 const Shop = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
   const navigate = useNavigate();
+  const [actionImage, setActionImage] = useState(""); // Estado local para la imagen de acción
 
   const toggleNavigate = () => {
     navigate("/tienda");
@@ -17,14 +18,22 @@ const Shop = () => {
 
   const handleRemoveFromCart = (id) => {
     dispatch(removeFromCart({ id }));
+     // Establecer la imagen cuando se elimina un artículo
+  };
+
+  const handleRemoveAllFromCart = () => {
+    dispatch(removeAllFromCart());
+     // Establecer la imagen cuando se limpia el carrito
   };
 
   const handleIncreaseQuantity = (id) => {
     dispatch(increaseQuantity({ id }));
+    // Establecer la imagen cuando se aumenta la cantidad
   };
 
   const handleDecreaseQuantity = (id) => {
-    dispatch(decreaseQuantity({ id })); // Despacha la acción decreaseQuantity con el ID del artículo
+    dispatch(decreaseQuantity({ id }));
+     // Establecer la imagen cuando se disminuye la cantidad
   };
 
   // Calcular la cantidad total de artículos y el precio total
@@ -95,7 +104,10 @@ const Shop = () => {
         <p>Total Items: {totalQuantity}</p>
         <p>Total Price: {totalPrice.toFixed(2)} € </p>
       </div>
+      {/* Mostrar la imagen de acción */}
+      {actionImage && <img src={actionImage} alt="Action" />}
       <button className="button">BY</button>
+      <button onClick={handleRemoveAllFromCart} className="button">CLEAN</button>
     </div>
   );
 };
